@@ -7,14 +7,14 @@ DROP TABLE usuarios;
 
 
 CREATE TABLE usuarios (
-idUsuario VARCHAR2(10) PRIMARY KEY,
+idUsuario CHAR(10) PRIMARY KEY,
 nombre VARCHAR2(50) NOT NULL,
 email VARCHAR2(50) NOT NULL UNIQUE, 
 contraseña VARCHAR2(15) NOT NULL 
 );
 
 CREATE TABLE eventos (
-idEvento VARCHAR2(10) PRIMARY KEY,
+idEvento CHAR(10) PRIMARY KEY,
 fecha DATE NOT NULL,
 titulo VARCHAR2(40) NOT NULL,
 ubicacion VARCHAR2(40) NOT NULL,
@@ -22,27 +22,27 @@ descripcion VARCHAR2(50)
 );
 
 CREATE TABLE galerias (
-idGalerias VARCHAR2(10) PRIMARY KEY,
+idGalerias CHAR(10) PRIMARY KEY,
 titulo VARCHAR2(30) NOT NULL,
-id_evento VARCHAR2(10) NOT NULL,
+id_evento CHAR(10) NOT NULL,
 CONSTRAINT fk_eventos_galerias FOREIGN KEY (id_evento) REFERENCES eventos (idEvento)
 );
 
 CREATE TABLE Imagenes_Galerias (
-idImagenes_galeria VARCHAR2(10) PRIMARY KEY,
+idImagenes_galeria CHAR(10) PRIMARY KEY,
 título VARCHAR2(40),
 imagen VARCHAR2(100) NOT NULL,
-id_galeria VARCHAR2(10) NOT NULL,
+id_galeria CHAR(10) NOT NULL,
 CONSTRAINT fk_galeria_imagen FOREIGN KEY (id_galeria) REFERENCES galerias (idGalerias) 
 );
+
 CREATE TABLE Favoritos (
-id_usuario VARCHAR2(10) NOT NULL,
-id_evento VARCHAR2(10) NOT NULL,
+id_usuario CHAR(10) NOT NULL,
+id_evento CHAR(10) NOT NULL,
 PRIMARY KEY (id_usuario, id_evento),
 CONSTRAINT fk_fav_usuario FOREIGN KEY (id_usuario) REFERENCES usuarios (idUsuario),
 CONSTRAINT fk_fav_evento FOREIGN KEY (id_evento) REFERENCES eventos (idEvento)
 );
-
 
 INSERT INTO Usuarios VALUES (4, 'Ana García', 'ana.garcia@happiness.com', 'pass4ana');
 INSERT INTO Usuarios VALUES (5, 'Carlos Ruiz', 'c.ruiz@happiness.com', 'pass5carlos');
@@ -128,17 +128,6 @@ INSERT INTO Favoritos (id_usuario, id_evento) VALUES ('7', '4');
 /*Usuario 8: Ya tiene (8,2) Le faltan dos*/
 INSERT INTO Favoritos (id_usuario, id_evento) VALUES ('8', '3');
 INSERT INTO Favoritos (id_usuario, id_evento) VALUES ('8', '6');
-
-select *
-from usuarios;
-select *
-from eventos;
-select *
-from Galerias;
-select *
-from imagenes_Galerias;
-select *
-from favoritos;
 
 /*vistas pedidas*/
 SELECT *
