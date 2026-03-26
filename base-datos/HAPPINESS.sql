@@ -133,7 +133,7 @@ INSERT INTO Favoritos (id_usuario, id_evento) VALUES ('8', '6');
 SELECT *
 FROM vista_galerias_antes_febrero;
 SELECT *
-FROM vista_favoritos_usuario1;
+FROM vista_favoritos_usuario1;  
 SELECT *
 FROM vista_imagenes_evento_2;
 SELECT *
@@ -141,32 +141,32 @@ FROM vista_favoritos_usuario2;
 
 
 /*vista de galerias*/
-CREATE OR REPLACE VIEW vista_galerias_antes_febrero AS
+CREATE VIEW vista_galerias_antes_febrero AS
 SELECT galerias.idGalerias, galerias.titulo, eventos.idEvento, eventos.fecha
-FROM galerias
-JOIN eventos ON galerias.id_evento = eventos.idEvento
-WHERE eventos.fecha < TO_DATE('2026-02-28', 'YYYY-MM-DD');
-
-/*vista de favoritos usuario 1*/
-CREATE OR REPLACE VIEW vista_favoritos_usuario1 AS
+FROM galerias, eventos
+WHERE galerias.id_evento = eventos.idEvento AND eventos.fecha < TO_DATE('2026-02-28', 'YYYY-MM-DD');
+    
+    
+    /*vista de favoritos usuario 1*/
+CREATE VIEW vista_favoritos_usuario1 AS
 SELECT eventos.idEvento, eventos.fecha, eventos.titulo, eventos.ubicacion, eventos.descripcion
-FROM eventos
-JOIN favoritos ON eventos.idEvento = favoritos.id_evento
-WHERE favoritos.id_usuario = '4';
-
-/*vista de imagenes del evento 12-01-2026*/
-CREATE OR REPLACE VIEW vista_imagenes_evento_2 AS
+FROM eventos, favoritos
+WHERE eventos.idEvento = favoritos.id_evento AND favoritos.id_usuario = '4';
+    
+    /*vista de imagenes del evento 12-01-2026*/
+CREATE VIEW vista_imagenes_evento_2 AS
 SELECT Imagenes_Galerias.idImagenes_galeria, Imagenes_Galerias.título, Imagenes_Galerias.imagen, Imagenes_Galerias.id_galeria
-FROM Imagenes_Galerias
-JOIN galerias ON Imagenes_Galerias.id_galeria = galerias.idGalerias
-WHERE galerias.id_evento = '2';
-
-/*vista vista favoritos usuario2 28-02-2026*/
-CREATE OR REPLACE VIEW vista_favoritos_usuario2 AS
+FROM Imagenes_Galerias, galerias
+WHERE Imagenes_Galerias.id_galeria = galerias.idGalerias AND galerias.id_evento = '2';
+    
+    /*vista vista favoritos usuario2 28-02-2026*/
+CREATE VIEW vista_favoritos_usuario2 AS
 SELECT eventos.idEvento, eventos.fecha, eventos.titulo, eventos.ubicacion, eventos.descripcion
-FROM eventos
-JOIN favoritos ON eventos.idEvento = favoritos.id_evento
-WHERE favoritos.id_usuario = '5'
-AND eventos.fecha > TO_DATE('2026-02-28', 'YYYY-MM-DD');
+FROM eventos, favoritos
+WHERE eventos.idEvento = favoritos.id_evento AND favoritos.id_usuario = '5' AND eventos.fecha > TO_DATE('2026-02-28', 'YYYY-MM-DD');
+    
+    
+
+
 
 
