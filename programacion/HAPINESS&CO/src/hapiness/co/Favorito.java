@@ -24,16 +24,19 @@ public class Favorito {
         return correoUsuario;
     }
 
-    public void setCorreoUsuario(String correoUsuario) {
-        this.correoUsuario = correoUsuario;
-    }
-
     public int getIdEvento() {
         return idEvento;
+    }
+
+    public void setCorreoUsuario(String correoUsuario) {
+        this.correoUsuario = correoUsuario;
     }
 
     public void setIdEvento(int idEvento) {
         this.idEvento = idEvento;
     }
 
+    public String toString() {
+        return "Favorito [correoUsuario=" + correoUsuario + ", idEvento=" + idEvento + "]";
+    }
 }
