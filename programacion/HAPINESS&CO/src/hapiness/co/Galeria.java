@@ -58,4 +58,8 @@ public class Galeria {
         this.id = id;
     }
 
+    public String toString() {
+        return "Galeria [id=" + id + ", titulo=" + titulo + ", idEvento=" + idEvento + "]";
+    }
+
 }
