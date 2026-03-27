@@ -88,4 +88,12 @@ public class Evento {
         this.galerias = galerias;
     }
 
+    public String toString() {
+        return "Evento [id=" + id 
+                + ", titulo=" + titulo
+                + ", fecha=" + fecha
+                + ", ubicacion=" + ubicacion
+                + ", descripcion=" + descripcion
+                + ", galerias=" + galerias.size() + "]";
+    }
 }
