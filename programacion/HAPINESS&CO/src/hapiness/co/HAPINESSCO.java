@@ -32,7 +32,7 @@ public class HAPINESSCO {
 
             switch (opcion) {
                 case 1:
-                    aniadirUsuario();
+                    añadirUsuario();
                     break;
                 case 2:
                     eliminarUsuario();
@@ -119,6 +119,26 @@ public class HAPINESSCO {
                 System.out.println("  Nombre: " + u.getNombre() + " | Email: " + u.getEmail());
             }
             System.out.println("-------------------------");
+        }
+    }
+    private static void añadirUsuario() {
+        System.out.println("=== ANIADIR USUARIO ===");
+
+        System.out.print("Nombre: ");
+        String nombre = teclado.nextLine();
+
+        System.out.print("Email: ");
+        String email = teclado.nextLine();
+
+        System.out.print("Password: ");
+        String password = teclado.nextLine();
+
+        if (listaUsuarios.containsKey(email)) {
+            System.out.println("El usuario ya existe.");
+        } else {
+            usuarios nuevoUsuario = new usuarios(nombre, email, password);
+            listaUsuarios.put(email, nuevoUsuario);
+            System.out.println("Usuario creado correctamente.");
         }
     }
 }
