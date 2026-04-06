@@ -196,7 +196,8 @@ public class HAPINESSCO {
             }
         }
     }
-     private static void aniadirGaleria() {
+
+    private static void aniadirGaleria() {
         System.out.println("=== ANIADIR GALERIA ===");
         mostrarEventos();
 
@@ -217,4 +218,48 @@ public class HAPINESSCO {
         }
     }
 
+    private static void eliminarGaleria() {
+        System.out.println("=== ELIMINAR GALERIA ===");
+        mostrarEventos();
+        int idEvento, idGaleria;
+        if (listaEventos.size() == 0) {
+            System.out.println("No hay eventos registrados.");
+        } else {
+            idEvento = leerEntero("ID del evento: ");
+            if (!listaEventos.containsKey(idEvento)) {
+                System.out.println("El evento no existe.");
+            } else {
+                Evento evento = listaEventos.get(idEvento);
+                ArrayList<Galeria> listaGalerias = evento.getGalerias();
+
+                if (listaGalerias.size() == 0) {
+                    System.out.println("Este evento no tiene galerias registradas.");
+                } else {
+                    System.out.println("--- GALERIAS DEL EVENTO '" + evento.getTitulo() + "' ---");
+                    for (int i = 0; i < listaGalerias.size(); i++) {
+                        Galeria g = listaGalerias.get(i);
+                        System.out.println("  ID: " + g.getId() + " | Titulo: " + g.getTitulo());
+                    }
+                    System.out.println("--------------------------------------------------");
+
+                    idGaleria = leerEntero("ID de la galeria a eliminar: ");
+                    Galeria galeriaAEliminar = null;
+
+                    for (int i = 0; i < listaGalerias.size(); i++) {
+                        if (listaGalerias.get(i).getId() == idGaleria) {
+                            galeriaAEliminar = listaGalerias.get(i);
+                            break;
+                        }
+                    }
+
+                    if (galeriaAEliminar == null) {
+                        System.out.println("La galeria no existe en este evento.");
+                    } else {
+                        listaGalerias.remove(galeriaAEliminar);
+                        System.out.println("Galeria eliminada correctamente.");
+                    }
+                }
+            }
+        }
+    }
 }
