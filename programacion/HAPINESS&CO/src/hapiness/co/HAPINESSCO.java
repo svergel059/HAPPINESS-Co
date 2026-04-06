@@ -298,4 +298,39 @@ public class HAPINESSCO {
             }
         }
     }
+     private static void eliminarFavorito() {
+        System.out.println("=== ELIMINAR FAVORITO ===");
+
+        if (listaFavoritos.size() == 0) {
+            System.out.println("No hay favoritos registrados.");
+        } else {
+            System.out.println("--- LISTA DE FAVORITOS ---");
+            for (int i = 0; i < listaFavoritos.size(); i++) {
+                Favorito f = listaFavoritos.get(i);
+                System.out.println("  Usuario: " + f.getCorreoUsuario()
+                        + " | Evento ID: " + f.getIdEvento());
+            }
+            System.out.println("--------------------------");
+
+            System.out.print("Email del usuario: ");
+            String email = teclado.nextLine();
+            int idEvento = leerEntero("ID del evento: ");
+
+            Favorito favoritoAEliminar = null;
+            for (int i = 0; i < listaFavoritos.size(); i++) {
+                Favorito f = listaFavoritos.get(i);
+                if (f.getCorreoUsuario().equals(email) && f.getIdEvento() == idEvento) {
+                    favoritoAEliminar = f;
+                    break;
+                }
+            }
+
+            if (favoritoAEliminar == null) {
+                System.out.println("El favorito no existe.");
+            } else {
+                listaFavoritos.remove(favoritoAEliminar);
+                System.out.println("Favorito eliminado correctamente.");
+            }
+        }
+    }
 }
