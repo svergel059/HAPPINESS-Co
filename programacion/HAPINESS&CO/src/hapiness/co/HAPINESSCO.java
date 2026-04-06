@@ -121,6 +121,7 @@ public class HAPINESSCO {
             System.out.println("-------------------------");
         }
     }
+
     private static void añadirUsuario() {
         System.out.println("=== ANIADIR USUARIO ===");
 
@@ -141,6 +142,7 @@ public class HAPINESSCO {
             System.out.println("Usuario creado correctamente.");
         }
     }
+
     private static void eliminarUsuario() {
         System.out.println("=== ELIMINAR USUARIO ===");
 
@@ -154,8 +156,9 @@ public class HAPINESSCO {
             System.out.println("Usuario eliminado correctamente.");
         }
     }
+
     private static void añadirEvento() {
-        
+
         System.out.println("=== ANIADIR EVENTO ===");
 
         System.out.print("Titulo: ");
@@ -171,8 +174,26 @@ public class HAPINESSCO {
         String descripcion = teclado.nextLine();
 
         Evento nuevoEvento = new Evento(fecha, titulo, ubicacion, descripcion);
-        
+
         listaEventos.put(nuevoEvento.getId(), nuevoEvento);
         System.out.println("Evento creado correctamente con ID: " + nuevoEvento.getId());
+    }
+
+    private static void eliminarEvento() {
+        int idEvento;
+        System.out.println("=== ELIMINAR EVENTO ===");
+        mostrarEventos();
+
+        if (listaEventos.size() == 0) {
+            System.out.println("No hay eventos para eliminar.");
+        } else {
+            idEvento = leerEntero("ID del evento a eliminar: ");
+            if (!listaEventos.containsKey(idEvento)) {
+                System.out.println("El evento no existe.");
+            } else {
+                listaEventos.remove(idEvento);
+                System.out.println("Evento eliminado correctamente.");
+            }
+        }
     }
 }
