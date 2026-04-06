@@ -196,4 +196,25 @@ public class HAPINESSCO {
             }
         }
     }
+     private static void aniadirGaleria() {
+        System.out.println("=== ANIADIR GALERIA ===");
+        mostrarEventos();
+
+        if (listaEventos.size() == 0) {
+            System.out.println("No hay eventos para agregar galerias.");
+        } else {
+            int idEvento = leerEntero("ID del evento al que pertenece la galeria: ");
+            if (!listaEventos.containsKey(idEvento)) {
+                System.out.println("El evento no existe.");
+            } else {
+                Evento evento = listaEventos.get(idEvento);
+                System.out.print("Titulo de la galeria: ");
+                String titulo = teclado.nextLine();
+                Galeria nuevaGaleria = new Galeria(titulo, idEvento);
+                evento.getGalerias().add(nuevaGaleria);
+                System.out.println("Galeria creada correctamente con ID: " + nuevaGaleria.getId());
+            }
+        }
+    }
+
 }
