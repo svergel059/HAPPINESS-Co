@@ -9,16 +9,90 @@ package hapiness.co;
  *
  * @author ALUMNOS-FP
  */
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
+
+
+
 public class HAPINESSCO {
 
-    /**
-     * @param args the command line arguments
-     */
+    private static HashMap<String, usuarios> listaUsuarios = new HashMap<>();
+    private static HashMap<Integer, Evento> listaEventos = new HashMap<>();
+    private static ArrayList<Favorito> listaFavoritos = new ArrayList<>();
+    private static Scanner teclado = new Scanner(System.in);
+
     public static void main(String[] args) {
-        // TODO code application logic here
-    
-    
-    
+
+        int opcion;
+
+        do {
+            mostrarMenu();
+            opcion = teclado.nextInt();
+            teclado.nextLine();
+            System.out.println();
+
+            switch (opcion) {
+                case 1:
+                    aniadirUsuario();
+                    break;
+                case 2:
+                    eliminarUsuario();
+                    break;
+                case 3:
+                    aniadirEvento();
+                    break;
+                case 4:
+                    eliminarEvento();
+                    break;
+                case 5:
+                    aniadirGaleria();
+                    break;
+                case 6:
+                    eliminarGaleria();
+                    break;
+                case 7:
+                    aniadirFavorito();
+                    break;
+                case 8:
+                    eliminarFavorito();
+                    break;
+                case 9:
+                    System.out.println("Saliendo del sistema. Hasta pronto!");
+                    break;
+                default:
+                    System.out.println("Opcion no valida. Ingrese un numero entre 1 y 9.");
+            }
+
+            System.out.println();
+
+        } while (opcion != 9);
+
     }
-    
+
+    private static void mostrarMenu() {
+        System.out.println("================================================");
+        System.out.println("       SISTEMA DE GESTION DE EVENTOS            ");
+        System.out.println("================================================");
+        System.out.println("  1. Añadir usuario");
+        System.out.println("  2. Eliminar usuario");
+        System.out.println("  3. Añadir evento");
+        System.out.println("  4. Eliminar evento");
+        System.out.println("  5. Añadir galeria a un evento");
+        System.out.println("  6. Eliminar galeria de un evento");
+        System.out.println("  7. Añadir favorito");
+        System.out.println("  8. Eliminar favorito");
+        System.out.println("  9. Salir");
+        System.out.println("================================================");
+        System.out.print("Seleccione una opcion: ");
+    }
+
+    private static int leerEntero(String mensaje) {
+        int valor; 
+        System.out.print(mensaje);
+        valor = teclado.nextInt();
+        teclado.nextLine();
+        return valor;
+    }
 }
