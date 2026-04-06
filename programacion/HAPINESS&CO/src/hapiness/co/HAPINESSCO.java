@@ -141,4 +141,17 @@ public class HAPINESSCO {
             System.out.println("Usuario creado correctamente.");
         }
     }
+    private static void eliminarUsuario() {
+        System.out.println("=== ELIMINAR USUARIO ===");
+
+        System.out.print("Email del usuario a eliminar: ");
+        String email = teclado.nextLine();
+
+        if (!listaUsuarios.containsKey(email)) {
+            System.out.println("El usuario no existe.");
+        } else {
+            listaUsuarios.remove(email);
+            System.out.println("Usuario eliminado correctamente.");
+        }
+    }
 }
