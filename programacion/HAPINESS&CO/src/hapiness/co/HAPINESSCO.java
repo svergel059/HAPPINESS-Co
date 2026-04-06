@@ -9,12 +9,9 @@ package hapiness.co;
  *
  * @author ALUMNOS-FP
  */
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
-
-
 
 public class HAPINESSCO {
 
@@ -89,10 +86,27 @@ public class HAPINESSCO {
     }
 
     private static int leerEntero(String mensaje) {
-        int valor; 
+        int valor;
         System.out.print(mensaje);
         valor = teclado.nextInt();
         teclado.nextLine();
         return valor;
     }
+
+    private static void mostrarEventos() {
+        if (listaEventos.size() == 0) {
+            System.out.println("No hay eventos registrados.");
+        } else {
+            System.out.println("--- LISTA DE EVENTOS ---");
+            for (int i = 0; i < listaEventos.size(); i++) {
+                Evento evento = (Evento) listaEventos.values().toArray()[i];
+                System.out.println("ID: " + evento.getId()
+                        + " | Titulo: " + evento.getTitulo()
+                        + " | Fecha: " + evento.getFecha()
+                        + " | Galerias: " + evento.getGalerias().size());
+            }
+            System.out.println("------------------------");
+        }
+    }
+
 }
