@@ -50,7 +50,7 @@ public class HAPINESSCO {
                     eliminarGaleria();
                     break;
                 case 7:
-                    aniadirFavorito();
+                    añadirFavorito();
                     break;
                 case 8:
                     eliminarFavorito();
@@ -258,6 +258,42 @@ public class HAPINESSCO {
                         listaGalerias.remove(galeriaAEliminar);
                         System.out.println("Galeria eliminada correctamente.");
                     }
+                }
+            }
+        }
+    }
+    private static void añadirFavorito() {
+        System.out.println("=== ANIADIR FAVORITO ===");
+        mostrarUsuarios();
+        mostrarEventos();
+
+        if (listaUsuarios.size() == 0 || listaEventos.size() == 0) {
+            System.out.println("Se necesitan usuarios y eventos registrados para crear favoritos.");
+        } else {
+            System.out.print("Email del usuario: ");
+            String email = teclado.nextLine();
+            int idEvento = leerEntero("ID del evento: ");
+
+            if (!listaUsuarios.containsKey(email)) {
+                System.out.println("El usuario no existe.");
+            } else if (!listaEventos.containsKey(idEvento)) {
+                System.out.println("El evento no existe.");
+            } else {
+                boolean existe = false;
+                for (int i = 0; i < listaFavoritos.size(); i++) {
+                    Favorito f = listaFavoritos.get(i);
+                    if (f.getCorreoUsuario().equals(email) && f.getIdEvento() == idEvento) {
+                        existe = true;
+                        break;
+                    }
+                }
+
+                if (existe) {
+                    System.out.println("Este favorito ya existe.");
+                } else {
+                    Favorito nuevoFavorito = new Favorito(email, idEvento);
+                    listaFavoritos.add(nuevoFavorito);
+                    System.out.println("Favorito creado correctamente.");
                 }
             }
         }
