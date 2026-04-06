@@ -109,4 +109,16 @@ public class HAPINESSCO {
         }
     }
 
+    private static void mostrarUsuarios() {
+        if (listaUsuarios.size() == 0) {
+            System.out.println("No hay usuarios registrados.");
+        } else {
+            System.out.println("--- LISTA DE USUARIOS ---");
+            for (int i = 0; i < listaUsuarios.size(); i++) {
+                usuarios u = (usuarios) listaUsuarios.values().toArray()[i];
+                System.out.println("  Nombre: " + u.getNombre() + " | Email: " + u.getEmail());
+            }
+            System.out.println("-------------------------");
+        }
+    }
 }
