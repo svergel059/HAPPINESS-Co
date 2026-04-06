@@ -38,7 +38,7 @@ public class HAPINESSCO {
                     eliminarUsuario();
                     break;
                 case 3:
-                    aniadirEvento();
+                    añadirEvento();
                     break;
                 case 4:
                     eliminarEvento();
@@ -153,5 +153,26 @@ public class HAPINESSCO {
             listaUsuarios.remove(email);
             System.out.println("Usuario eliminado correctamente.");
         }
+    }
+    private static void añadirEvento() {
+        
+        System.out.println("=== ANIADIR EVENTO ===");
+
+        System.out.print("Titulo: ");
+        String titulo = teclado.nextLine();
+
+        System.out.print("Fecha ( YYYY/MM/DD): ");
+        String fecha = teclado.nextLine();
+
+        System.out.print("Ubicacion: ");
+        String ubicacion = teclado.nextLine();
+
+        System.out.print("Descripcion: ");
+        String descripcion = teclado.nextLine();
+
+        Evento nuevoEvento = new Evento(fecha, titulo, ubicacion, descripcion);
+        
+        listaEventos.put(nuevoEvento.getId(), nuevoEvento);
+        System.out.println("Evento creado correctamente con ID: " + nuevoEvento.getId());
     }
 }
