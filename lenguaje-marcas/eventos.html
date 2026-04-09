@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosaCorp: '#ba007c',
+                        azulCorp: '#009bdb',
+                        naranjaCorp: '#ff7b00',
+                        grisCorp: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Eventos - HAPPINESS&Co</title>
+</head>
+
+<main class="container mx-auto px-6 py-16 bg-gray-50/50">
+
+    <div class="flex items-center gap-4 mb-10">
+        <h3 class="text-3xl font-black tracking-tighter text-gray-800 border-l-8 border-rosaCorp pl-5 uppercase whitespace-nowrap">
+            Próximos <span class="text-rosaCorp">Eventos</span>
+        </h3>
+        <span class="h-px flex-1 bg-gray-200"></span>
+        <span class="text-xs font-bold text-gray-400 whitespace-nowrap">4 eventos</span>
+    </div>
+
+    <div class="flex flex-col gap-6">
+
+        <!-- 1. Cuarteto de flautas dulces -->
+        <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+            <div class="flex flex-col flex-1 min-w-0">
+                <div class="flex gap-2 flex-wrap mb-1">
+                    <span class="inline-flex items-center gap-1.5 bg-pink-50 text-rosaCorp border border-pink-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                        <span class="w-1.5 h-1.5 rounded-full bg-rosaCorp animate-ping"></span>Hoy
+                    </span>
+                    <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Música</span>
+                </div>
+                <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Cuarteto de flautas dulces</h4>
+                <div class="flex items-center gap-5 mb-4">
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        09 de abril, 2026
+                    </span>
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                        Bogotá
+                    </span>
+                </div>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Música antigua para nuestro tiempo. Una experiencia única que acerca las composiciones del renacimiento y el barroco al público contemporáneo.</p>
+                <div class="mt-auto flex items-center gap-4">
+                    <a href="evento.html" class="inline-flex items-center gap-2 bg-rosaCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-pink-800 transition-colors duration-300">
+                        Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                    <span class="text-[11px] text-gray-400 font-semibold">Entradas disponibles</span>
+                </div>
+            </div>
+            <div class="flex gap-2.5 flex-shrink-0 h-56">
+                <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full">
+                    <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="w-24 flex flex-col gap-2.5 h-full">
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <hr class="border-gray-100">
+
+        <!-- 2. Festival Verano -->
+        <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+            <div class="flex flex-col flex-1 min-w-0">
+                <div class="flex gap-2 flex-wrap mb-1">
+                    <span class="inline-flex items-center gap-1.5 bg-orange-50 text-naranjaCorp border border-orange-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                        <span class="w-1.5 h-1.5 rounded-full bg-naranjaCorp"></span>57 días
+                    </span>
+                    <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Música</span>
+                </div>
+                <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Festival Verano</h4>
+                <div class="flex items-center gap-5 mb-4">
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        05 de junio, 2026
+                    </span>
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                        Parque Sur
+                    </span>
+                </div>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Música al aire libre en el icónico Parque Sur. Una experiencia inolvidable con los mejores artistas del verano en un escenario único rodeado de naturaleza.</p>
+                <div class="mt-auto flex items-center gap-4">
+                    <a href="evento.html" class="inline-flex items-center gap-2 bg-rosaCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-pink-800 transition-colors duration-300">
+                        Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                    <span class="text-[11px] text-gray-400 font-semibold">Entradas disponibles</span>
+                </div>
+            </div>
+            <div class="flex gap-2.5 flex-shrink-0 h-56">
+                <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full">
+                    <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="w-24 flex flex-col gap-2.5 h-full">
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/festival de verano/festival.png" alt="Festival" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <hr class="border-gray-100">
+
+        <!-- 3. Cine de Verano -->
+        <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+            <div class="flex flex-col flex-1 min-w-0">
+                <div class="flex gap-2 flex-wrap mb-1">
+                    <span class="inline-flex items-center gap-1.5 bg-blue-50 text-azulCorp border border-blue-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                        <span class="w-1.5 h-1.5 rounded-full bg-azulCorp"></span>67 días
+                    </span>
+                    <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Cine</span>
+                </div>
+                <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Cine de Verano</h4>
+                <div class="flex items-center gap-5 mb-4">
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        15 de junio, 2026
+                    </span>
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                        Playa Grande
+                    </span>
+                </div>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Proyección nocturna frente al mar en Playa Grande. Una noche mágica bajo las estrellas con las mejores películas del año en un entorno incomparable.</p>
+                <div class="mt-auto flex items-center gap-4">
+                    <a href="evento.html" class="inline-flex items-center gap-2 bg-azulCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-300">
+                        Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                    <span class="text-[11px] text-gray-400 font-semibold">Entradas disponibles</span>
+                </div>
+            </div>
+            <div class="flex gap-2.5 flex-shrink-0 h-56">
+                <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full">
+                    <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="w-24 flex flex-col gap-2.5 h-full">
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <hr class="border-gray-100">
+
+        <!-- 4. Feria Gastronómica -->
+        <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+            <div class="flex flex-col flex-1 min-w-0">
+                <div class="flex gap-2 flex-wrap mb-1">
+                    <span class="inline-flex items-center gap-1.5 bg-orange-50 text-naranjaCorp border border-orange-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+                        <span class="w-1.5 h-1.5 rounded-full bg-naranjaCorp"></span>77 días
+                    </span>
+                    <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Gastronomía</span>
+                </div>
+                <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Feria Gastronómica</h4>
+                <div class="flex items-center gap-5 mb-4">
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                        25 de junio, 2026
+                    </span>
+                    <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/></svg>
+                        Recinto Ferial
+                    </span>
+                </div>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Sabores locales y tradición en el Recinto Ferial. Descubre lo mejor de la gastronomía local con productores, chefs y experiencias culinarias únicas.</p>
+                <div class="mt-auto flex items-center gap-4">
+                    <a href="evento.html" class="inline-flex items-center gap-2 bg-naranjaCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                        Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/></svg>
+                    </a>
+                    <span class="text-[11px] text-gray-400 font-semibold">Entradas disponibles</span>
+                </div>
+            </div>
+            <div class="flex gap-2.5 flex-shrink-0 h-56">
+                <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full">
+                    <img src="assets/img/feria gastronomica/feria-gastronomica.jpg" alt="Feria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                </div>
+                <div class="w-24 flex flex-col gap-2.5 h-full">
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/feria gastronomica/feria-gastronomica.jpg" alt="Feria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                    <div class="flex-1 rounded-xl overflow-hidden bg-gray-100">
+                        <img src="assets/img/feria gastronomica/feria-gastronomica.jpg" alt="Feria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </div>
+</main>
