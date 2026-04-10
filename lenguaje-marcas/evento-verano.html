@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosaCorp: '#ba007c',
+                        azulCorp: '#009bdb',
+                        naranjaCorp: '#ff7b00',
+                        grisCorp: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Festival de Verano - HAPPINESS&Co</title>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+            <a href="eventos.html#festival-verano" class="inline-flex items-center gap-2 text-rosaCorp font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver a eventos
+            </a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-pink-50/50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl">
+                <span class="inline-block bg-rosaCorp text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1 rounded-full mb-6">
+                    Festival Cultural
+                </span>
+                <h1 class="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter leading-none mb-8">
+                    Festival de <span class="text-rosaCorp">Verano 2026</span>
+                </h1>
+                
+                <div class="flex flex-wrap gap-8 items-center border-t border-pink-100 pt-8">
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Fecha</p>
+                        <p class="font-bold text-lg text-gray-800">05 de junio, 2026</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Lugar</p>
+                        <p class="font-bold text-lg text-gray-800">Parque Sur</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Ambiente</p>
+                        <p class="font-bold text-lg text-gray-800">Aire Libre & Familiar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-xl text-gray-600 leading-relaxed font-light italic border-l-4 border-rosaCorp pl-6 mb-12">
+                            "El verano es una oportunidad para habitar el espacio común desde la alegría, la creatividad y la expresión cultural."
+                        </p>
+                        
+                        <div class="space-y-6 text-gray-700 leading-relaxed">
+                            <p>
+                                El verano se presenta como un tiempo de encuentro, movimiento y celebración, donde la luz, el calor y la energía colectiva invitan a compartir experiencias que fortalecen los lazos entre las personas.
+                            </p>
+                            
+                            <h3 class="text-2xl font-black uppercase tracking-tight text-gray-800 pt-4">Encuentros de Verano</h3>
+                            <p>
+                                Este festival es una propuesta que reúne diversas manifestaciones artísticas y recreativas. Cada actividad abre un espacio para el disfrute, la participación y el reconocimiento de la diversidad cultural presente en la comunidad. Aquí la música, la danza, el juego y la interacción se convierten en protagonistas.
+                            </p>
+                            
+                            <p>
+                                Buscamos generar experiencias significativas donde el público no solo observa, sino que también participa activamente. El evento invita a valorar esta temporada como un motor de bienestar, convivencia y creación de recuerdos compartidos que estimulan el sentido de pertenencia.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-12">
+                        <img src="assets/img/festival de verano/fiesta.png" class="rounded-2xl w-full h-48 object-cover shadow-lg" alt="Ambiente festival">
+                        <img src="assets/img/festival de verano/verano-colorido.png" class="rounded-2xl w-full h-48 object-cover shadow-lg" alt="Colores de verano">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="sticky top-32 space-y-8">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival Verano" class="w-full object-cover">
+                        </div>
+                        
+                        <div class="bg-pink-50 border border-pink-100 p-8 rounded-3xl">
+                            <h4 class="font-black text-gray-900 uppercase mb-4 tracking-tight">Detalles del Festival</h4>
+                            <div class="space-y-4 mb-8 text-sm text-gray-600">
+                                <p class="flex items-center gap-3">
+                                    <strong class="text-rosaCorp">●</strong> Entrada Libre para toda la familia
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <strong class="text-rosaCorp">●</strong> Zona de hidratación y Food Trucks
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <strong class="text-rosaCorp">●</strong> Actividades al aire libre
+                                </p>
+                            </div>
+                            
+                            <button class="w-full bg-rosaCorp hover:bg-black text-white font-black uppercase tracking-widest py-4 rounded-xl transition-all duration-300">
+                                Ver Programación
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 py-12 border-t border-gray-100">
+        <div class="container mx-auto px-6 text-center text-xs font-bold text-gray-400 uppercase tracking-[0.3em]">
+            HAPPINESS&Co — Festival de Verano 2026
+        </div>
+    </footer>
+
+</body>
+
+</html>

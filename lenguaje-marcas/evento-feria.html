@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosaCorp: '#ba007c',
+                        azulCorp: '#009bdb',
+                        naranjaCorp: '#ff7b00',
+                        grisCorp: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Feria Gastronómica - HAPPINESS&Co</title>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+            <a href="eventos.html" class="inline-flex items-center gap-2 text-naranjaCorp font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver a eventos
+            </a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-orange-50/30">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl">
+                <span class="inline-block bg-naranjaCorp text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1 rounded-full mb-6">
+                    Experiencia Culinaria
+                </span>
+                <h1 class="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter leading-none mb-8">
+                    Feria <span class="text-naranjaCorp">Gastronómica</span>
+                </h1>
+                
+                <div class="flex flex-wrap gap-8 items-center border-t border-orange-100 pt-8">
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Fecha</p>
+                        <p class="font-bold text-lg text-gray-800">25 de junio, 2026</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Lugar</p>
+                        <p class="font-bold text-lg text-gray-800">Recinto Ferial</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Concepto</p>
+                        <p class="font-bold text-lg text-gray-800">Sabores que nos reúnen</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-xl text-gray-600 leading-relaxed font-light italic border-l-4 border-naranjaCorp pl-6 mb-12">
+                            "La gastronomía es una forma de encuentro que conecta culturas, memorias y tradiciones a través de los sabores."
+                        </p>
+                        
+                        <div class="space-y-6 text-gray-700 leading-relaxed">
+                            <p>
+                                En el contexto del verano, la comida se convierte en una experiencia compartida que invita a recorrer distintos territorios sin salir de un mismo espacio. La feria es un punto de convergencia donde cada sabor cuenta una historia y cada receta refleja una identidad única.
+                            </p>
+                            
+                            <h3 class="text-2xl font-black uppercase tracking-tight text-gray-800 pt-4">Un Intercambio Cultural Vivo</h3>
+                            <p>
+                                A través de muestras y degustaciones, el evento promueve el reconocimiento de la cocina como patrimonio y expresión colectiva. Los asistentes no solo degustan alimentos, sino que participan en un diálogo sensorial donde los aromas, colores y texturas estimulan la curiosidad.
+                            </p>
+                            
+                            <p>
+                                Este espacio busca generar un ambiente de convivencia, transformando el acto de compartir alimentos en una celebración de unión. Es una invitación a experimentar con todos los sentidos y dejar una huella de identidad y experiencias compartidas en la comunidad.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4 mt-12">
+                        <img src="assets/img/feria gastronomica/feria-gastronomica1.jpg" class="rounded-2xl w-full h-48 object-cover shadow-lg" alt="Plato feria">
+                        <img src="assets/img/feria gastronomica/feria-gastronomica2.jpg" class="rounded-2xl w-full h-48 object-cover shadow-lg" alt="Ambiente feria">
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="sticky top-32 space-y-8">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="assets/img/feria gastronomica/feria-gastronomica.jpg" alt="Feria Gastronómica" class="w-full object-cover">
+                        </div>
+                        
+                        <div class="bg-orange-50 border border-orange-100 p-8 rounded-3xl">
+                            <h4 class="font-black text-gray-900 uppercase mb-4 tracking-tight">Guía del Visitante</h4>
+                            <div class="space-y-4 mb-8 text-sm text-gray-600">
+                                <p class="flex items-center gap-3">
+                                    <strong class="text-naranjaCorp">●</strong> Más de 30 expositores locales
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <strong class="text-naranjaCorp">●</strong> Talleres de cocina en vivo
+                                </p>
+                                <p class="flex items-center gap-3">
+                                    <strong class="text-naranjaCorp">●</strong> Zona infantil habilitada
+                                </p>
+                            </div>
+                            
+                            <button class="w-full bg-naranjaCorp hover:bg-gray-900 text-white font-black uppercase tracking-widest py-4 rounded-xl transition-all duration-300">
+                                Ver Mapa Gastronómico
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
+        <div class="container mx-auto px-6 text-center text-xs font-bold text-gray-400 uppercase tracking-[0.3em]">
+            HAPPINESS&Co — Feria Gastronómica 2026
+        </div>
+    </footer>
+
+</body>
+
+</html>

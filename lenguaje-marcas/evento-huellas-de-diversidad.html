@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosaCorp: '#ba007c',
+                        azulCorp: '#009bdb',
+                        naranjaCorp: '#ff7b00',
+                        grisCorp: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Huellas de Diversidad - Leticia 2026</title>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="container mx-auto px-6 py-4">
+            <a href="historial.html" class="inline-flex items-center gap-2 text-grisCorp font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7" />
+                </svg>
+                Volver a historial
+            </a>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl">
+                <span class="inline-block bg-grisCorp text-white text-[10px] font-black uppercase tracking-[0.2em] px-4 py-1 rounded-full mb-6">
+                    Encuentro Cultural
+                </span>
+                <h1 class="text-5xl md:text-7xl font-black text-gray-900 uppercase tracking-tighter leading-none mb-8">
+                    Huellas de <span class="text-grisCorp">Diversidad</span>
+                </h1>
+                
+                <div class="flex flex-wrap gap-8 items-center border-t border-gray-200 pt-8">
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Fecha</p>
+                        <p class="font-bold text-lg text-gray-800">25 de marzo, 2026</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Lugar</p>
+                        <p class="font-bold text-lg text-gray-800">Leticia, Amazonas</p>
+                    </div>
+                    <div>
+                        <p class="text-[10px] uppercase font-bold text-gray-400 tracking-widest mb-1">Propósito</p>
+                        <p class="font-bold text-lg text-gray-800">Diálogo e Identidad</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="prose prose-lg max-w-none">
+                        <p class="text-xl text-gray-600 leading-relaxed font-light italic border-l-4 border-grisCorp pl-6 mb-12">
+                            "La diversidad se manifiesta como una riqueza que habita en las formas de pensar, sentir y vivir el mundo."
+                        </p>
+                        
+                        <div class="space-y-6 text-gray-700 leading-relaxed">
+                            <p>
+                                En territorios como <strong>Leticia</strong>, la diversidad es un tejido vivo que se construye a partir de las huellas de cada comunidad. Este encuentro invita a reconocer y celebrar las múltiples identidades presentes a través de expresiones artísticas y participativas.
+                            </p>
+                            
+                            <h3 class="text-2xl font-black uppercase tracking-tight text-gray-800 pt-4">Respeto e Inclusión</h3>
+                            <p>
+                                Buscamos generar conciencia sobre la importancia de la convivencia, destacando cómo cada cultura aporta a un mundo más equilibrado. Las actividades visibilizan historias y tradiciones que fortalecen el sentido de pertenencia y el reconocimiento del otro.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-gray-900 text-white p-10 rounded-3xl mt-12">
+                        <h4 class="text-grisCorp font-black uppercase tracking-widest text-sm mb-4">El Impacto</h4>
+                        <p class="text-lg leading-relaxed font-light text-gray-300">
+                            Un espacio para visibilizar historias que fortalecen el tejido social y promueven la diversidad como elemento fundamental para la vida en comunidad.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5">
+                    <div class="sticky top-32 space-y-8">
+                        <div class="rounded-3xl overflow-hidden shadow-2xl">
+                            <img src="assets/img/huellas de diversidad/huellas-de-diversidad.png" alt="Encuentro Cultural Leticia" class="w-full h-full object-cover aspect-square lg:aspect-auto">
+                        </div>
+                        
+                        <div class="bg-gray-50 border border-gray-200 p-8 rounded-3xl">
+                            <h4 class="font-black text-gray-900 uppercase mb-4 tracking-tight">Actividades</h4>
+                            <div class="space-y-4 mb-8 text-sm text-gray-600">
+                                <p class="flex items-center gap-3"><strong class="text-grisCorp">●</strong> Muestras artísticas locales</p>
+                                <p class="flex items-center gap-3"><strong class="text-grisCorp">●</strong> Círculos de diálogo abierto</p>
+                            </div>
+                            
+                            <button class="w-full bg-grisCorp hover:bg-black text-white font-black uppercase tracking-widest py-4 rounded-xl transition-all duration-300">
+                                Participar ahora
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-100 py-12 border-t border-gray-200 text-center text-xs font-bold text-gray-400 uppercase tracking-[0.3em]">
+        HAPPINESS&Co — Leticia, Amazonas 2026
+    </footer>
+
+</body>
+</html>

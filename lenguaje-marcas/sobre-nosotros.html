@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosaCorp: '#ba007c',
+                        azulCorp: '#009bdb',
+                        naranjaCorp: '#ff7b00',
+                        grisCorp: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Sobre Nosotros - HAPPINESS&Co</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <header class="bg-grisCorp shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS"
+                    class="h-10 w-auto object-contain">
+            </a>
+
+            <nav class="hidden md:block">
+                <ul class="flex gap-6">
+                    <li><a href="index.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Inicio</a></li>
+                    <li><a href="eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Eventos</a></li>
+                    <li><a href="historial.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Historial</a></li>
+                    <li>
+                        <a href="sobre-nosotros.html" class="nav-link text-rosaCorp border-b-2 border-rosaCorp pb-1">Sobre nosotros</a>
+                    </li>
+                    <li><a href="contacto.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
+
+    <main class="container mx-auto px-6 py-16">
+
+        <!-- TÍTULO DE SECCIÓN -->
+        <div class="flex items-center gap-4 mb-12">
+            <h3
+                class="text-3xl font-black tracking-tighter text-gray-800 border-l-8 border-rosaCorp pl-5 uppercase whitespace-nowrap">
+                Sobre <span class="text-rosaCorp">Nosotros</span>
+            </h3>
+            <span class="h-px flex-1 bg-gray-200"></span>
+            <span
+                class="text-xs font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">HAPPINESS&Co</span>
+        </div>
+
+        <!-- BLOQUE DE TEXTO E IMÁGENES -->
+       <section class="mb-20">
+
+    <!-- Párrafo 1 + imagen derecha -->
+    <div class="flex flex-col md:flex-row gap-10 items-center mb-14">
+        <div class="flex-1">
+            <h4 class="font-black text-2xl uppercase tracking-tighter text-gray-800 mb-4 border-l-4 border-rosaCorp pl-4">
+                ¿Quiénes somos?</h4>
+            <p class="text-gray-500 leading-relaxed text-sm">
+                HAPPINESS&Co es una empresa joven y dinámica dedicada, en cuerpo y alma, al mundo del ocio.
+                Perdidos entre la inmensa marea de actividades culturales que existen cada día en nuestra
+                ciudad, nos dimos cuenta de que hacía falta buscar un poco de orden y estructura en este inmenso
+                océano de posibilidades.
+            </p>
+        </div>
+        <div class="w-full md:w-80 h-56 rounded-2xl overflow-hidden bg-black flex-shrink-0 shadow-sm flex items-center justify-center">
+            <img src="assets/img/happines-and-co-upper-02.png" alt="HAPPINESS&Co" class="h-40 w-auto object-contain">
+        </div>
+    </div>
+
+    <!-- Párrafo 2 + imagen izquierda -->
+    <div class="flex flex-col md:flex-row-reverse gap-10 items-center mb-14">
+        <div class="flex-1">
+            <h4 class="font-black text-2xl uppercase tracking-tighter text-gray-800 mb-4 border-l-4 border-naranjaCorp pl-4">
+                Nuestra misión</h4>
+            <p class="text-gray-500 leading-relaxed text-sm">
+                Y así surgió HAPPINESS&Co: una agenda cultural que intenta recopilar y organizar todos los
+                eventos culturales, de cualquier tipo, que tienen lugar en nuestra localidad e inmediaciones.
+                Música, teatro, exposiciones… Todo tiene cabida en nuestra agenda.
+            </p>
+        </div>
+        <div class="w-full md:w-80 h-56 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm">
+            <img src="assets/img/mision.png" alt="Nuestra misión" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+    <!-- Párrafo 3 + imagen derecha -->
+    <div class="flex flex-col md:flex-row gap-10 items-center">
+        <div class="flex-1">
+            <h4 class="font-black text-2xl uppercase tracking-tighter text-gray-800 mb-4 border-l-4 border-azulCorp pl-4">
+                Bienvenidos</h4>
+            <p class="text-gray-500 leading-relaxed text-sm">
+                Aquí encontrarás desde grandes festivales hasta pequeños conciertos de barrio, pasando por
+                exposiciones de arte, teatro independiente y mucho más. Porque creemos que la cultura no
+                entiende de tamaños, y cada experiencia merece ser vivida. ¡Bienvenidos a HAPPINESS&Co!
+            </p>
+        </div>
+        <div class="w-full md:w-80 h-56 rounded-2xl overflow-hidden flex-shrink-0 shadow-sm">
+            <img src="assets/img/festival de verano/festival.png" alt="Bienvenidos" class="w-full h-full object-cover">
+        </div>
+    </div>
+
+</section>
+
+<!-- SEPARADOR -->
+<div class="flex items-center gap-4 mb-12">
+    <h3 class="text-3xl font-black tracking-tighter text-gray-800 border-l-8 border-grisCorp pl-5 uppercase whitespace-nowrap">
+        Nuestro <span class="text-grisCorp">Equipo</span>
+    </h3>
+    <span class="h-px flex-1 bg-gray-200"></span>
+</div>
+
+<!-- EQUIPO -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+
+    <!-- Miembro 1 -->
+    <div class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+        <div class="h-72 bg-gray-100 overflow-hidden">
+            <img src="assets/img/empresarios/empresario2.png" alt="Carlos Martínez"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="p-6">
+            <div class="mb-3">
+                <h5 class="font-black text-lg uppercase tracking-tighter text-gray-800">Carlos Martínez</h5>
+                <span class="inline-flex items-center bg-pink-50 text-rosaCorp border border-pink-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mt-1">
+                    Director General
+                </span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+                Licenciado en Gestión Cultural por la Universidad Complutense. Más de 10 años de experiencia en
+                producción de eventos y programación artística. Apasionado del teatro y la música en vivo.
+            </p>
+        </div>
+    </div>
+
+    <!-- Miembro 2 -->
+    <div class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+        <div class="h-72 bg-gray-100 overflow-hidden">
+            <img src="assets/img/empresarios/empresario1.png" alt="Carlos Rueda"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="p-6">
+            <div class="mb-3">
+                <h5 class="font-black text-lg uppercase tracking-tighter text-gray-800">Carlos Rueda</h5>
+                <span class="inline-flex items-center bg-orange-50 text-naranjaCorp border border-orange-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mt-1">
+                    Director de Contenidos
+                </span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+                Periodista cultural con 8 años cubriendo la escena artística local e internacional.
+                Especializado en música contemporánea y artes escénicas. Colaborador habitual en medios
+                especializados.
+            </p>
+        </div>
+    </div>
+
+    <!-- Miembro 3 -->
+    <div class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 overflow-hidden">
+        <div class="h-72 bg-gray-100 overflow-hidden">
+            <img src="assets/img/empresarios/empresaria1.png" alt="Miguel Torres"
+                class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+        </div>
+        <div class="p-6">
+            <div class="mb-3">
+                <h5 class="font-black text-lg uppercase tracking-tighter text-gray-800">Miguel Torres</h5>
+                <span class="inline-flex items-center bg-blue-50 text-azulCorp border border-blue-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full mt-1">
+                    Director de Comunicación
+                </span>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+                Graduado en Publicidad y Relaciones Públicas. Experto en comunicación digital y gestión de redes
+                sociales. Ha trabajado con múltiples organizaciones culturales y festivales internacionales.
+            </p>
+        </div>
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+<footer class="w-full bg-[#111111] text-white pt-20 pb-10 mt-10">
+        <div class="max-w-[1400px] mx-auto px-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+
+                <div class="space-y-6">
+                    <a href="index.html" class="inline-block group">
+                        <span
+                            class="text-2xl font-black uppercase italic tracking-tighter transition-colors duration-300 group-hover:text-rosaCorp">
+                            Happiness<span
+                                class="text-rosaCorp group-hover:text-white transition-colors duration-300">&Co</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Creamos experiencias inolvidables a través de eventos que conectan personas, cultura y
+                        felicidad. Tu destino premium.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-black uppercase italic tracking-tighter text-rosaCorp text-lg mb-8">Navegación</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html"
+                                class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Inicio</a>
+                        </li>
+                        <li><a href="eventos.html"
+                                class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Eventos</a>
+                        </li>
+                        <li><a href="historial.html"
+                                class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Historial</a>
+                        </li>
+                        <li><a href="contacto.html"
+                                class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-black uppercase italic tracking-tighter text-azulCorp text-lg mb-8">Categorías</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Música</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Cine</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Gastronomía</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="space-y-8">
+                    <h4 class="font-black uppercase italic tracking-tighter text-naranjaCorp text-lg mb-4">Síguenos</h4>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">
+                        Únete a nuestra comunidad oficial.
+                    </p>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#"
+                            class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-azulCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6 text-gray-400 group-hover:text-azulCorp transition-colors"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+
+                        <a href="#"
+                            class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-naranjaCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                class="w-5 h-5 text-gray-400 group-hover:text-naranjaCorp transition-colors"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4l11.733 16h3.267l-11.733 -16z" />
+                                <path d="M18.267 4h-3.267l-4.733 6l4.733 6z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
