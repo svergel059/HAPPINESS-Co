@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,33 +20,449 @@
             }
         }
     </script>
-    <title>Sobre Nosotros - HAPPINESS&Co</title>
     <style>
-        html {
-            scroll-behavior: smooth;
+        html { scroll-behavior: smooth; }
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
     </style>
+    <title>Eventos - HAPPINESS&Co</title>
 </head>
 
 <body class="bg-gray-50">
-    <header class="bg-grisCorp shadow sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html">
-                <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS"
-                    class="h-10 w-auto object-contain">
-            </a>
+  <header class="bg-grisCorp shadow sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="index.html">
+        <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS"
+          class="h-10 w-auto object-contain">
+      </a>
 
-            <nav class="hidden md:block">
-                <ul class="flex gap-6">
-                    <li><a href="index.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Inicio</a></li>
-                    <li><a href="eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Eventos</a></li>
-                    <li><a href="historial.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Historial</a></li>
-                    <li>
-                        <a href="sobre-nosotros.html" class="nav-link text-rosaCorp border-b-2 border-rosaCorp pb-1">Sobre nosotros</a>
-                    </li>
-                    <li><a href="contacto.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+      <nav class="hidden md:block">
+        <ul class="flex gap-6">
+          <li><a href="index.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Inicio</a></li>
+          <li><a href="todos-los-eventos.html" class="nav-link text-rosaCorp border-b-2 border-rosaCorp pb-1">Eventos</a></li>
+          <li><a href="eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Próximos Eventos</a></li>
+          <li><a href="historial.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Historial</a></li>
+          <li><a href="sobre-nosotros.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Sobre nosotros</a></li>
+          <li><a href="Fuentes.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Fuentes</a></li>
+          <li><a href="contacto.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 </body>
+    <main class="container mx-auto px-6 py-16 bg-gray-50/50">
+
+        <!-- Grid principal: eventos + sidebar -->
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_300px] gap-12 items-start">
+
+            <!-- Columna izquierda: lista de eventos -->
+            <div class="flex flex-col gap-6">
+
+                <!-- ── PRÓXIMOS EVENTOS ── -->
+                <div class="flex items-center gap-4 mb-4">
+                    <h3 class="text-3xl font-black tracking-tighter text-gray-800 border-l-8 border-rosaCorp pl-5 uppercase whitespace-nowrap">
+                        Próximos <span class="text-rosaCorp">Eventos</span>
+                    </h3>
+                    <span class="h-px flex-1 bg-gray-200"></span>
+                    <span class="text-xs font-bold text-gray-400 whitespace-nowrap">3 eventos</span>
+                </div>
+
+                <hr class="border-gray-100">
+
+                <!-- Evento: Festival Verano -->
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <div class="flex gap-2 flex-wrap mb-1">
+                            <span class="inline-flex items-center gap-1.5 bg-orange-50 text-naranjaCorp border border-orange-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-naranjaCorp"></span>57 días</span>
+                            <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Música</span>
+                        </div>
+                        <h4 class="font-black text-3xl text-gray-800 uppercase mt-3 mb-3">Festival Verano</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Música al aire libre en el icónico Parque Sur. Una experiencia inolvidable con los mejores artistas del verano.</p>
+                        <div class="mt-auto flex items-center gap-4">
+                            <a href="evento-verano.html" class="inline-flex items-center gap-2 bg-rosaCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-pink-800 transition-colors duration-300">
+                                Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 flex-shrink-0 h-56">
+                        <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full"><img src="assets/img/festival de verano/festival-verano.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="w-24 flex flex-col gap-2.5 h-full">
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/festival de verano/fiesta.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/festival de verano/verano-colorido.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="border-gray-100">
+
+                <!-- Evento: Cine de Verano -->
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <div class="flex gap-2 flex-wrap mb-1">
+                            <span class="inline-flex items-center gap-1.5 bg-blue-50 text-azulCorp border border-blue-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-azulCorp"></span>67 días</span>
+                            <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Cine</span>
+                        </div>
+                        <h4 class="font-black text-3xl text-gray-800 uppercase mt-3 mb-3">Cine de Verano</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Proyección nocturna frente al mar en Playa Grande. Una noche mágica bajo las estrellas.</p>
+                        <div class="mt-auto flex items-center gap-4">
+                            <a href="evento-cine.html" class="inline-flex items-center gap-2 bg-azulCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-blue-700 transition-colors duration-300">
+                                Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 flex-shrink-0 h-56">
+                        <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full"><img src="assets/img/cine de verano/Cine de Verano.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="w-24 flex flex-col gap-2.5 h-full">
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/cine de verano/cine-verano1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/cine de verano/cineveranovertical.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="border-gray-100">
+
+                <!-- Evento: Feria Gastronómica -->
+                <article class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <div class="flex gap-2 flex-wrap mb-1">
+                            <span class="inline-flex items-center gap-1.5 bg-orange-50 text-naranjaCorp border border-orange-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"><span class="w-1.5 h-1.5 rounded-full bg-naranjaCorp"></span>77 días</span>
+                            <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Gastronomía</span>
+                        </div>
+                        <h4 class="font-black text-3xl text-gray-800 uppercase mt-3 mb-3">Feria Gastronómica</h4>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Sabores locales y tradición. Descubre lo mejor de la gastronomía local con experiencias culinarias únicas.</p>
+                        <div class="mt-auto flex items-center gap-4">
+                            <a href="evento-feria.html" class="inline-flex items-center gap-2 bg-naranjaCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-orange-600 transition-colors duration-300">
+                                Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 flex-shrink-0 h-56">
+                        <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full"><img src="assets/img/feria gastronomica/feria-gastronomica.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="w-24 flex flex-col gap-2.5 h-full">
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/feria gastronomica/feria-gastronomica1.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/feria gastronomica/feria-gastronomica2.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- ── EVENTOS FINALIZADOS ── -->
+                <div class="flex items-center gap-4 mt-10 mb-4">
+                    <h3 class="text-3xl font-black tracking-tighter text-gray-800 border-l-8 border-grisCorp pl-5 uppercase whitespace-nowrap">
+                        Eventos <span class="text-grisCorp">Finalizados</span>
+                    </h3>
+                    <span class="h-px flex-1 bg-gray-200"></span>
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">4 registros</span>
+                </div>
+
+                <hr class="border-gray-100">
+
+                <!-- Evento: Cuarteto de flautas -->
+                <article id="evento-flautas" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <div class="flex gap-2 flex-wrap mb-1">
+                            <span class="inline-flex items-center gap-1.5 bg-pink-50 text-rosaCorp border border-pink-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Música</span>
+                        </div>
+                        <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Cuarteto de flautas dulces</h4>
+                        <div class="flex items-center gap-5 mb-4">
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                09 de abril, 2026
+                            </span>
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                                Bogotá
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Música antigua para nuestro tiempo. Una experiencia única que acerca las composiciones del renacimiento y el barroco.</p>
+                        <div class="mt-auto flex items-center gap-4">
+                            <a href="evento-flautas.html" class="inline-flex items-center gap-2 bg-rosaCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-pink-800 transition-colors duration-300">
+                                Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                            <span class="text-[10px] bg-gray-100 text-gray-400 font-black uppercase px-3 py-1 rounded-md tracking-tighter">Evento Finalizado</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 flex-shrink-0 h-56">
+                        <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full"><img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="w-24 flex flex-col gap-2.5 h-full">
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/cuarteto de flautas/flauta.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/cuarteto de flautas/niño-tocando-faluta.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="border-gray-100">
+
+                <!-- Evento: Laboratorio artístico -->
+                <article id="evento-laboratorio" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <div class="flex gap-2 flex-wrap mb-1">
+                            <span class="inline-flex items-center gap-1.5 bg-gray-50 text-grisCorp border border-gray-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Laboratorio</span>
+                        </div>
+                        <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Laboratorio artístico</h4>
+                        <div class="flex items-center gap-5 mb-4">
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                26 de marzo, 2026
+                            </span>
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                                Leticia
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Labor-Arte: un espacio para la creación y experimentación artística colectiva enfocado en el entorno amazónico.</p>
+                        <div class="mt-auto flex items-center gap-4">
+                            <a href="evento-laboratorio-artistico.html" class="inline-flex items-center gap-2 bg-grisCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300">
+                                Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                            <span class="text-[10px] bg-gray-100 text-gray-400 font-black uppercase px-3 py-1 rounded-md tracking-tighter">Evento Finalizado</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 flex-shrink-0 h-56">
+                        <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full"><img src="assets/img/laboratorio artistico/laboratorio-artistico.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="w-24 flex flex-col gap-2.5 h-full">
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/laboratorio artistico/laboratorio1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/laboratorio artistico/laboratorio2.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="border-gray-100">
+
+                <!-- Evento: Huellas de diversidad -->
+                <article id="evento-huellas" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <div class="flex gap-2 flex-wrap mb-1">
+                            <span class="inline-flex items-center gap-1.5 bg-gray-50 text-grisCorp border border-gray-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Talleres</span>
+                        </div>
+                        <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Huellas de diversidad</h4>
+                        <div class="flex items-center gap-5 mb-4">
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                25 de marzo, 2026
+                            </span>
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                                Leticia
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Talleres con maletas didácticas del Museo del Oro para explorar nuestra identidad cultural y raíces ancestrales.</p>
+                        <div class="mt-auto flex items-center gap-4">
+                            <a href="evento-huellas-de-diversidad.html" class="inline-flex items-center gap-2 bg-grisCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-gray-800 transition-colors duration-300">
+                                Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                            <span class="text-[10px] bg-gray-100 text-gray-400 font-black uppercase px-3 py-1 rounded-md tracking-tighter">Evento Finalizado</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 flex-shrink-0 h-56">
+                        <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full"><img src="assets/img/huellas de diversidad/huellas-de-diversidad.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="w-24 flex flex-col gap-2.5 h-full">
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/huellas de diversidad/huellas-de-diversidad1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/huellas de diversidad/huellas-de-diversidad2.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </article>
+
+                <hr class="border-gray-100">
+
+                <!-- Evento: Exposición Arte Moderno -->
+                <article id="evento-exposicion" class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
+                    <div class="flex flex-col flex-1 min-w-0">
+                        <div class="flex gap-2 flex-wrap mb-1">
+                            <span class="inline-flex items-center gap-1.5 bg-orange-50 text-naranjaCorp border border-orange-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Exposición</span>
+                        </div>
+                        <h4 class="font-black text-3xl text-gray-800 uppercase leading-tight tracking-tighter mt-3 mb-3">Exposición Arte Moderno</h4>
+                        <div class="flex items-center gap-5 mb-4">
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                                24 de enero, 2026
+                            </span>
+                            <span class="flex items-center gap-1.5 text-xs font-semibold text-gray-400">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
+                                Museo Local
+                            </span>
+                        </div>
+                        <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Muestra de pintura moderna con artistas contemporáneos de la región, destacando nuevas tendencias visuales.</p>
+                        <div class="mt-auto flex items-center gap-4">
+                            <a href="evento-exposicion-arte.html" class="inline-flex items-center gap-2 bg-naranjaCorp text-white text-xs font-black uppercase tracking-wider px-6 py-3 rounded-full hover:bg-orange-700 transition-colors duration-300">
+                                Ver más <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7" /></svg>
+                            </a>
+                            <span class="text-[10px] bg-gray-100 text-gray-400 font-black uppercase px-3 py-1 rounded-md tracking-tighter">Evento Finalizado</span>
+                        </div>
+                    </div>
+                    <div class="flex gap-2.5 flex-shrink-0 h-56">
+                        <div class="w-44 rounded-xl overflow-hidden bg-gray-100 h-full"><img src="assets/img/exposicion arte/exposicion-arte.jpg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        <div class="w-24 flex flex-col gap-2.5 h-full">
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/exposicion arte/arte-moderno1.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                            <div class="flex-1 rounded-xl overflow-hidden bg-gray-100"><img src="assets/img/exposicion arte/arte-moderno2.png" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"></div>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+            <!-- Fin columna izquierda -->
+
+            <!-- Columna derecha: sidebar sticky -->
+            <aside class="sticky top-24 border-l border-gray-100 lg:pl-6">
+                <h3 class="font-black text-xl uppercase text-gray-800 mb-8 flex items-center gap-2">
+                    Recomendados
+                    <span class="flex-grow h-[2px] bg-gray-100"></span>
+                </h3>
+                <div class="space-y-4">
+
+                    <!-- Próximos -->
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 pl-1">Próximos</p>
+
+                    <div onclick="window.location.href='evento-verano.html'" class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#ba007c] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
+                            <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival Verano" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">57 días</p>
+                                <p class="font-black text-gray-800 group-hover:text-[#ba007c] transition-colors uppercase text-sm leading-tight">Festival Verano</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Música</p>
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#ba007c] text-xs">→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div onclick="window.location.href='evento-cine.html'" class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#009bdb] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
+                            <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine de Verano" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">67 días</p>
+                                <p class="font-black text-gray-800 group-hover:text-[#009bdb] transition-colors uppercase text-sm leading-tight">Cine de Verano</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Cine</p>
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#009bdb] text-xs">→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Finalizados -->
+                    <p class="text-[10px] font-black uppercase tracking-widest text-gray-400 pl-1 pt-4">Finalizados</p>
+
+                    <div onclick="window.location.href='#evento-flautas'" class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#ba007c] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
+                            <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto de flautas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">09-04-2026</p>
+                                <p class="font-black text-gray-800 group-hover:text-[#ba007c] transition-colors uppercase text-sm leading-tight">Cuarteto de flautas dulces</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Bogotá</p>
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#ba007c] text-xs">→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div onclick="window.location.href='#evento-huellas'" class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#ff7b00] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
+                            <img src="assets/img/huellas de diversidad/huellas-de-diversidad.png" alt="Huellas de diversidad" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">25-03-2026</p>
+                                <p class="font-black text-gray-800 group-hover:text-[#ff7b00] transition-colors uppercase text-sm leading-tight">Huellas de diversidad</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Leticia</p>
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#ff7b00] text-xs">→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div onclick="window.location.href='#evento-laboratorio'" class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#555555] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
+                            <img src="assets/img/laboratorio artistico/laboratorio-artistico.png" alt="Laboratorio artístico" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow">
+                            <div>
+                                <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">26-03-2026</p>
+                                <p class="font-black text-gray-800 group-hover:text-[#555555] transition-colors uppercase text-sm leading-tight">Laboratorio artístico</p>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Leticia</p>
+                                <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#555555] text-xs">→</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </aside>
+            <!-- Fin columna derecha -->
+
+        </div>
+        <!-- Fin grid principal -->
+
+    </main>
+
+    <footer class="w-full bg-[#111111] text-white pt-20 pb-10 mt-10">
+        <div class="max-w-[1400px] mx-auto px-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+
+                <div class="space-y-6">
+                    <a href="index.html" class="inline-block group">
+                        <span class="text-2xl font-black uppercase italic tracking-tighter transition-colors duration-300 group-hover:text-rosaCorp">
+                            Happiness<span class="text-rosaCorp group-hover:text-white transition-colors duration-300">&Co</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Creamos experiencias inolvidables a través de eventos que conectan personas, cultura y felicidad. Tu destino premium.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="font-black uppercase italic tracking-tighter text-rosaCorp text-lg mb-8">Navegación</h4>
+                    <ul class="space-y-4">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Inicio</a></li>
+                        <li><a href="eventos.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Eventos</a></li>
+                        <li><a href="historial.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Historial</a></li>
+                        <li><a href="contacto.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="font-black uppercase italic tracking-tighter text-azulCorp text-lg mb-8">Categorías</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Música</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Cine</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Gastronomía</a></li>
+                    </ul>
+                </div>
+
+                <div class="space-y-8">
+                    <h4 class="font-black uppercase italic tracking-tighter text-naranjaCorp text-lg mb-4">Síguenos</h4>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">Únete a nuestra comunidad oficial.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-azulCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400 group-hover:text-azulCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-naranjaCorp/50 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-naranjaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h3.267l-11.733 -16z" /><path d="M18.267 4h-3.267l-4.733 6l4.733 6z" /></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html> 
