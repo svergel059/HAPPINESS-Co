@@ -55,7 +55,7 @@
             Próximos <span class="text-rosaCorp">Eventos</span>
         </h3>
         <span class="h-px flex-1 bg-gray-200"></span>
-        <span class="text-xs font-bold text-gray-400 whitespace-nowrap">3 eventos</span>
+        <span class="text-xs font-bold text-gray-400 uppercase tracking-widest whitespace-nowrap">3 registros encontrados</span>    
     </div>
 
     <!-- Grid principal: eventos + sidebar -->
@@ -69,13 +69,16 @@
             <article
                 class="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-500 p-8 flex flex-col md:flex-row gap-8 items-stretch">
                 <div class="flex flex-col flex-1 min-w-0">
-                    <div class="flex gap-2 flex-wrap mb-1">
-                        <span
-                            class="inline-flex items-center gap-1.5 bg-orange-50 text-naranjaCorp border border-orange-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full"><span
-                                class="w-1.5 h-1.5 rounded-full bg-naranjaCorp"></span>57 días</span>
-                        <span
-                            class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">Música</span>
-                    </div>
+                   <div class="flex gap-2 flex-wrap mb-1">
+    <span class="inline-flex items-center gap-1.5 bg-rose-50 text-rosaCorp border border-rose-200 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+        <span class="w-1.5 h-1.5 rounded-full bg-rosaCorp"></span>
+        57 días
+    </span>
+
+    <span class="inline-flex items-center bg-gray-100 text-gray-500 text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full">
+        Música
+    </span>
+</div>
                     <h4 class="font-black text-3xl text-gray-800 uppercase mt-3 mb-3">Festival Verano</h4>
                     <p class="text-sm text-gray-500 leading-relaxed mb-6 line-clamp-3">Música al aire libre en el
                         icónico Parque Sur. Una experiencia inolvidable con los mejores artistas del verano.</p>
@@ -201,60 +204,54 @@
 
         <!-- Columna derecha: recomendados sticky -->
         <aside class="sticky top-24 border-l border-gray-100 lg:pl-6">
-            <h3 class="font-black text-xl uppercase text-gray-800 mb-8 flex items-center gap-2">
-                Recomendados
-                <span class="flex-grow h-[2px] bg-gray-100"></span>
-            </h3>
-            <div class="space-y-4">
+    <h3 class="font-black text-xl uppercase text-gray-800 mb-8 flex items-center gap-2">
+        Recomendados
+        <span class="flex-grow h-[2px] bg-gray-100"></span>
+    </h3>
+    <div class="space-y-4">
 
-                <div onclick="window.location.href='eventos.html'"
-                    class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#ba007c] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
-                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
-                        <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival Verano"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="flex flex-col justify-between flex-grow">
-                        <div>
-                            <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">57 días</p>
-                            <p
-                                class="font-black text-gray-800 group-hover:text-[#ba007c] transition-colors uppercase text-sm leading-tight">
-                                Festival Verano
-                            </p>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Música</p>
-                            <span
-                                class="opacity-0 group-hover:opacity-100 transition-opacity text-[#ba007c] text-xs">→</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div onclick="window.location.href='eventos.html'"
-                    class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#009bdb] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
-                    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
-                        <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine de Verano"
-                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                    </div>
-                    <div class="flex flex-col justify-between flex-grow">
-                        <div>
-                            <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">67 días</p>
-                            <p
-                                class="font-black text-gray-800 group-hover:text-[#009bdb] transition-colors uppercase text-sm leading-tight">
-                                Cine de Verano
-                            </p>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Cine</p>
-                            <span
-                                class="opacity-0 group-hover:opacity-100 transition-opacity text-[#009bdb] text-xs">→</span>
-                        </div>
-                    </div>
-                </div>
-
-
-
+        <div onclick="window.location.href='evento-verano.html'"
+            class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#ba007c] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
+            <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
+                <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival Verano"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
             </div>
-        </aside>
+            <div class="flex flex-col justify-between flex-grow">
+                <div>
+                    <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">57 días</p>
+                    <p class="font-black text-gray-800 group-hover:text-[#ba007c] transition-colors uppercase text-sm leading-tight">
+                        Festival Verano
+                    </p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Música</p>
+                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#ba007c] text-xs">→</span>
+                </div>
+            </div>
+        </div>
+
+        <div onclick="window.location.href='evento-cine.html'"
+            class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#009bdb] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
+            <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
+                <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine de Verano"
+                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+            </div>
+            <div class="flex flex-col justify-between flex-grow">
+                <div>
+                    <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">67 días</p>
+                    <p class="font-black text-gray-800 group-hover:text-[#009bdb] transition-colors uppercase text-sm leading-tight">
+                        Cine de Verano
+                    </p>
+                </div>
+                <div class="flex justify-between items-center">
+                    <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Cine</p>
+                    <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#009bdb] text-xs">→</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</aside>
         <!-- Fin columna derecha -->
 
     </div>
