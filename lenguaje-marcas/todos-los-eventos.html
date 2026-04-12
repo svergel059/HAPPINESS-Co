@@ -1,1 +1,53 @@
 
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rosaCorp: '#ba007c',
+                        azulCorp: '#009bdb',
+                        naranjaCorp: '#ff7b00',
+                        grisCorp: '#555555'
+                    }
+                }
+            }
+        }
+    </script>
+    <title>Sobre Nosotros - HAPPINESS&Co</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50">
+    <header class="bg-grisCorp shadow sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html">
+                <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS"
+                    class="h-10 w-auto object-contain">
+            </a>
+
+            <nav class="hidden md:block">
+                <ul class="flex gap-6">
+                    <li><a href="index.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Inicio</a></li>
+                    <li><a href="eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Eventos</a></li>
+                    <li><a href="historial.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Historial</a></li>
+                    <li>
+                        <a href="sobre-nosotros.html" class="nav-link text-rosaCorp border-b-2 border-rosaCorp pb-1">Sobre nosotros</a>
+                    </li>
+                    <li><a href="contacto.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</body>
