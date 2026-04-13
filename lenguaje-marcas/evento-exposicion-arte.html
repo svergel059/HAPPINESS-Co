@@ -20,30 +20,188 @@
         }
     </script>
     <title>Exposición Arte Moderno - HAPPINESS&Co</title>
+<style>
+    .header-bar {
+            border-bottom: 3px solid #ba007c;
+            background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+        }
+
+        /* ── NAV LINK HOVER ── */
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ba007c;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* ── HERO COUNTER ── */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            animation: fadeUp 0.8s ease forwards;
+        }
+
+        .hero-meta {
+            animation: fadeUp 0.8s 0.2s ease both;
+        }
+
+        .hero-btn {
+            animation: fadeUp 0.8s 0.4s ease both;
+        }
+
+        /* ── BENTO GRID ── */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+        }
+
+        .bento-featured {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+
+        .bento-featured .card-img {
+            height: 280px;
+        }
+
+        .bento-featured h4 {
+            font-size: 1.6rem;
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .bento-featured {
+                grid-column: 1;
+                grid-row: auto;
+            }
+        }
+
+        /* ── CARD NÚMERO ── */
+        .card-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: white;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        /* ── BADGE COLOREADO ── */
+        .badge-rosa {
+            background: #ba007c;
+            color: white;
+        }
+
+        .badge-azul {
+            background: #009bdb;
+            color: white;
+        }
+
+        .badge-naranja {
+            background: #ff7b00;
+            color: white;
+        }
+
+        /* ── SIDEBAR CARD MEJORADA ── */
+        .rec-card {
+            transition: all 0.3s ease;
+        }
+
+        .rec-card:hover {
+            transform: translateX(6px);
+        }
+
+        /* ── FOOTER FRANJA ── */
+        .footer-accent {
+            height: 4px;
+            background: linear-gradient(90deg, #ba007c 0%, #009bdb 50%, #ff7b00 100%);
+        }
+
+        /* ── SEPARADOR SECCIÓN ── */
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: #ba007c;
+            border-radius: 2px;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
+    <header class="sticky top-0 z-50" style="background: #555555; border-bottom: 2px solid #ba007c;">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-    <header class="bg-grisCorp shadow sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html">
                 <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS"
                     class="h-10 w-auto object-contain">
             </a>
-            <nav class="hidden md:block">
-                <ul class="flex gap-6">
-                    <li><a href="index.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Inicio</a></li>
-                    <li><a href="todos-los-eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Eventos</a></li>
-                    <li><a href="eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Próximos Eventos</a></li>
-                    <li><a href="historial.html" class="nav-link text-rosaCorp border-b-2 border-rosaCorp pb-1">Historial</a></li>
-                    <li><a href="sobre-nosotros.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Sobre nosotros</a></li>
-                    <li><a href="Fuentes.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Fuentes</a></li>
-                    <li><a href="contacto.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Contacto</a></li>
-                </ul>
-            </nav>
+
+                <nav class="hidden md:block">
+                    <ul class="flex gap-8">
+                        <li><a href="index.html"
+                                class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Inicio</a>
+                        </li>
+                        <li><a href="todos-los-eventos.html"
+                                class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Eventos</a>
+                        </li>
+                        <li><a href="eventos.html"
+                                class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Próximos
+                                Eventos</a></li>
+                        <li><a href="historial.html"
+                                class="text-rosaCorp font-black text-[11px] uppercase tracking-widest border-b-2 border-rosaCorp pb-1">Historial</a>
+                        </li>
+                        <li><a href="sobre-nosotros.html"
+                                class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Sobre
+                                nosotros</a></li>
+                        <li><a href="Fuentes.html"
+                                class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Fuentes</a>
+                        </li>
+                        <li>
+                            <a href="contacto.html"
+                                class="px-5 py-2 font-black text-[11px] uppercase tracking-widest text-white rounded-full transition-all duration-300 hover:opacity-80"
+                                style="background:#ba007c;">
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
         </div>
     </header>
-
+</body>
     <nav class="bg-white border-b border-gray-100">
         <div class="container mx-auto px-6 py-4">
             <a href="historial.html" class="inline-flex items-center gap-2 text-grisCorp font-bold uppercase text-xs tracking-widest hover:gap-4 transition-all">
@@ -154,7 +312,7 @@
 
     <footer class="bg-grisCorp py-12 text-white text-center">
         <div class="container mx-auto px-6">
-            <p class="text-[10px] font-bold uppercase tracking-[0.4em] mb-4">HAPPINESS&Co — Leticia, Amazonas 2026</p>
+            <p class="text-[10px] font-bold uppercase tracking-[0.4em] mb-4">HAPPINESS&Co 2026</p>
             <div class="flex justify-center gap-8 text-[10px] font-black uppercase tracking-widest text-gray-400">
                 <a href="#" class="hover:text-rosaCorp transition-colors">Instagram</a>
                 <a href="#" class="hover:text-rosaCorp transition-colors">Facebook</a>

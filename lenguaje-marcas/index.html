@@ -9,446 +9,574 @@
         tailwind.config = { theme: { extend: { colors: { rosaCorp: '#ba007c', azulCorp: '#009bdb', naranjaCorp: '#ff7b00', grisCorp: '#555555' } } } }
     </script>
     <title>HAPPINESS&Co</title>
+    <style>
+        /* ── HEADER MEJORADO ── */
+        .header-bar {
+            border-bottom: 3px solid #ba007c;
+            background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+        }
+
+        /* ── NAV LINK HOVER ── */
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ba007c;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* ── HERO COUNTER ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero-title   { animation: fadeUp 0.8s ease forwards; }
+        .hero-meta    { animation: fadeUp 0.8s 0.2s ease both; }
+        .hero-btn     { animation: fadeUp 0.8s 0.4s ease both; }
+
+        /* ── BENTO GRID ── */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+        }
+        .bento-featured {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+        .bento-featured .card-img { height: 280px; }
+        .bento-featured h4 { font-size: 1.6rem; }
+
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-featured { grid-column: 1; grid-row: auto; }
+        }
+
+        /* ── CARD NÚMERO ── */
+        .card-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: white;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(6px);
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        /* ── BADGE COLOREADO ── */
+        .badge-rosa   { background: #ba007c; color: white; }
+        .badge-azul   { background: #009bdb; color: white; }
+        .badge-naranja{ background: #ff7b00; color: white; }
+
+        /* ── SIDEBAR CARD MEJORADA ── */
+        .rec-card { transition: all 0.3s ease; }
+        .rec-card:hover { transform: translateX(6px); }
+
+        /* ── FOOTER FRANJA ── */
+        .footer-accent {
+            height: 4px;
+            background: linear-gradient(90deg, #ba007c 0%, #009bdb 50%, #ff7b00 100%);
+        }
+
+        /* ── SEPARADOR SECCIÓN ── */
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: #ba007c;
+            border-radius: 2px;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50">
-    <header class="bg-grisCorp shadow sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html">
-                <img src="assets/img/happines-and-co-propuesta-05.jpg " alt="HAPPINESS"
-                    class="h-10 w-auto object-contain">
-            </a>
 
-            <nav class="hidden md:block">
-                <ul class="flex gap-6">
-                    <li><a href="index.html" class="nav-link text-rosaCorp border-b-2 border-rosaCorp pb-1">Inicio</a></li>
-                    <li><a href="todos-los-eventos.html"class="nav-link text-white hover:text-rosaCorp transition-colors">Eventos</a></li>
-                    <li><a href="eventos.html"class="nav-link text-white hover:text-rosaCorp transition-colors">Proxímos Eventos</a></li>
-                    <li><a href="historial.html"class="nav-link text-white hover:text-rosaCorp transition-colors">Historial</a></li>
-                    <li><a href="sobre-nosotros.html"class="nav-link text-white hover:text-rosaCorp transition-colors">Sobre nosotros</a></li>
-                    <li><a href="Fuentes.html"class="nav-link text-white hover:text-rosaCorp transition-colors">Fuentes</a></li>
-                    <li><a href="contacto.html"class="nav-link text-white hover:text-rosaCorp transition-colors">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-</body>
+    <!-- ══════════════════════════════
+         HEADER MEJORADO
+    ══════════════════════════════ -->
+    <header class="sticky top-0 z-50" style="background: #555555; border-bottom: 2px solid #ba007c;">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
 
-<section class="relative h-[580px] overflow-hidden group cursor-default bg-black">
-    <img src="assets/img/festival de verano/festival.png"
-        class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100"
-        style="filter: saturate(1.1) brightness(0.85);">
+        <a href="index.html">
+            <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS"
+                class="h-10 w-auto object-contain">
+        </a>
 
-    <div class="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent"></div>
-
-    <div class="absolute inset-0 flex flex-col justify-end p-10 md:p-16 text-white">
-
-        <div class="mb-7 flex">
-            <span
-                class="relative flex items-center gap-2 bg-white/10 backdrop-blur-xl border border-white/20 px-5 py-2 font-black text-[10px] tracking-[0.2em] rounded-full shadow-2xl transition-all duration-500 group-hover:text-rosaCorp">
-                <span class="relative flex h-2 w-2">
-                    <span
-                        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rosaCorp opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-rosaCorp"></span>
-                </span>
-                DESTACADO
-            </span>
-        </div>
-
-      <h2 class="text-5xl md:text-6xl lg:text-7xl font-black uppercase italic leading-none tracking-tighter drop-shadow-2xl transition-all duration-700 ease-out group-hover:translate-x-4">
-    Festival 
-    <span class="inline-block text-transparent bg-clip-text bg-gradient-to-r from-rosaCorp to-pink-400 pr-6">
-        Verano
-    </span>
-</h2>
-
-        <div
-            class="flex flex-wrap items-center gap-y-4 gap-x-8 mt-6 text-sm md:text-base font-bold tracking-wider transition-all duration-500 delay-100 group-hover:translate-x-4 opacity-90">
-            <div class="flex items-center gap-3">
-                <span
-                    class="p-2 bg-white/10 rounded-lg border border-white/10 group-hover:border-rosaCorp/30 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rosaCorp" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                            d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                </span>
-                <span>05-06-2026</span>
-            </div>
-
-            <div class="flex items-center gap-3">
-                <span
-                    class="p-2 bg-white/10 rounded-lg border border-white/10 group-hover:border-rosaCorp/30 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rosaCorp" fill="none"
-                        viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
-                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    </svg>
-                </span>
-                <span class="uppercase">Parque Sur</span>
-            </div>
-        </div>
-
-        <div
-            class="mt-12 opacity-0 translate-y-6 transition-all duration-700 delay-200 group-hover:opacity-100 group-hover:translate-y-0">
-            <a href="eventos.html"
-                class="relative inline-flex items-center justify-center px-10 py-4 overflow-hidden font-black text-xs uppercase tracking-[0.2em] text-white bg-rosaCorp rounded-full transition-all duration-300 hover:bg-white hover:text-black group/btn shadow-[0_0_25px_rgba(236,72,153,0.3)]">
-                <span class="relative z-10">Comprar Entradas</span>
-                <div
-                    class="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-100%)] group-hover/btn:duration-1000 group-hover/btn:[transform:skew(-12deg)_translateX(100%)]">
-                    <div class="relative h-full w-10 bg-white/20"></div>
-                </div>
-            </a>
-        </div>
+        <nav class="hidden md:block">
+            <ul class="flex gap-8">
+                <li><a href="index.html"
+                    class="text-rosaCorp font-black text-[11px] uppercase tracking-widest border-b-2 border-rosaCorp pb-1">Inicio</a></li>
+                <li><a href="todos-los-eventos.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Eventos</a></li>
+                <li><a href="eventos.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Próximos Eventos  </a></li>
+                <li><a href="historial.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Historial</a></li>
+                <li><a href="sobre-nosotros.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Sobre nosotros</a></li>
+                <li><a href="Fuentes.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Fuentes</a></li>
+                <li>
+                    <a href="contacto.html"
+                        class="px-5 py-2 font-black text-[11px] uppercase tracking-widest text-white rounded-full transition-all duration-300 hover:opacity-80"
+                        style="background:#ba007c;">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-</section>
+</header>
 
-<main class="container mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12 bg-gray-50/50">
-    <div class="lg:col-span-3">
-        <div class="flex items-center justify-between mb-10">
-            <h3 class="text-3xl font-black tracking-tighter text-gray-800 border-l-8 border-rosaCorp pl-5 uppercase">
-                Galeria <span class="text-rosaCorp">Cultural</span>
-            </h3>
-            <span class="hidden md:block h-px flex-1 bg-gray-200 ml-8"></span>
-        </div>
+    <!-- ══════════════════════════════
+         HERO MEJORADO
+    ══════════════════════════════ -->
+    <section class="relative h-[600px] overflow-hidden group cursor-default bg-black">
+        <img src="assets/img/festival de verano/festival.png"
+            class="absolute inset-0 w-full h-full object-cover transition-transform duration-[2s] ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100"
+            style="filter: saturate(1.2) brightness(0.75);">
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <article
-                class="group relative bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
-                <div class="relative overflow-hidden h-48">
-                    <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival Verano"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
-                        <p class="text-[10px] font-bold text-rosaCorp uppercase tracking-widest">Música</p>
-                    </div>
+        <!-- Gradiente más dramático -->
+        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.97) 0%, rgba(0,0,0,0.45) 50%, rgba(0,0,0,0.1) 100%);"></div>
+        <!-- Franja de color lateral -->
+        <div class="absolute left-0 top-0 bottom-0 w-1" style="background: #ba007c;"></div>
+
+        <div class="absolute inset-0 flex flex-col justify-end p-10 md:p-16 text-white">
+
+            <div class="mb-5 flex gap-3 hero-title">
+                <span class="flex items-center gap-2 px-4 py-1.5 font-black text-[10px] tracking-[0.25em] rounded-full border border-white/20 bg-white/10 backdrop-blur-md">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rosaCorp opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-rosaCorp"></span>
+                    </span>
+                    DESTACADO
+                </span>
+                <span class="flex items-center px-4 py-1.5 font-black text-[10px] tracking-[0.25em] rounded-full" style="background:#ba007c;">
+                    PRÓXIMO EVENTO
+                </span>
+            </div>
+
+            <h2 class="hero-title text-5xl md:text-7xl lg:text-8xl font-black uppercase italic leading-none tracking-tighter drop-shadow-2xl">
+                Festival
+                <span class="block text-transparent bg-clip-text" style="background: linear-gradient(90deg, #ba007c, #ff7b00); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Verano
+                </span>
+            </h2>
+
+            <!-- Descripción añadida -->
+            <p class="hero-meta mt-4 text-gray-300 text-base md:text-lg max-w-xl font-medium leading-relaxed">
+                Música al aire libre en el icónico Parque Sur. Una experiencia que no querrás perderte.
+            </p>
+
+            <div class="hero-meta flex flex-wrap items-center gap-y-4 gap-x-8 mt-5 text-sm font-bold tracking-wider opacity-90">
+                <div class="flex items-center gap-3">
+                    <span class="p-2 bg-white/10 rounded-lg border border-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rosaCorp" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                    </span>
+                    <span>05 · 06 · 2026</span>
                 </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <time datetime="2026-06-05" class="text-xs font-semibold text-gray-400 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-rosaCorp"></span> 05-06-2026
-                    </time>
-                    <h4
-                        class="font-black text-xl mt-2 text-gray-800 group-hover:text-rosaCorp transition-colors uppercase leading-tight">
-                        Festival Verano</h4>
-                    <p class="text-sm text-gray-500 mt-3 line-clamp-2">Música al aire libre en el icónico Parque
-                        Sur. Una experiencia inolvidable.</p>
-                    <div class="mt-auto pt-6">  
+                <div class="flex items-center gap-3">
+                    <span class="p-2 bg-white/10 rounded-lg border border-white/10">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-rosaCorp" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        </svg>
+                    </span>
+                    <span class="uppercase">Parque Sur</span>
+                </div>
+            </div>
+
+            <!-- Botón siempre visible -->
+            <div class="hero-btn mt-8 flex gap-4">
+                <a href="eventos.html"
+                    class="inline-flex items-center justify-center px-10 py-4 font-black text-xs uppercase tracking-[0.2em] text-white rounded-full transition-all duration-300 hover:scale-105 shadow-lg"
+                    style="background: #ba007c; box-shadow: 0 0 30px rgba(186,0,124,0.4);">
+                    Comprar Entradas
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="todos-los-eventos.html"
+                    class="inline-flex items-center justify-center px-10 py-4 font-black text-xs uppercase tracking-[0.2em] text-white rounded-full border border-white/30 transition-all duration-300 hover:bg-white/10">
+                    Ver todos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════ -->
+    <main class="container mx-auto px-6 py-16 grid grid-cols-1 lg:grid-cols-4 gap-12 bg-gray-50/50">
+
+        <!-- GALERÍA -->
+        <div class="lg:col-span-3">
+            <div class="flex items-center gap-4 mb-10">
+                <div>
+                    <div class="section-divider"></div>
+                    <h3 class="text-3xl font-black tracking-tighter text-gray-800 uppercase">
+                        Galería <span class="text-rosaCorp">Cultural</span>
+                    </h3>
+                </div>
+                <span class="hidden md:block h-px flex-1 bg-gray-200"></span>
+                <a href="todos-los-eventos.html" class="hidden md:inline-flex items-center text-xs font-black uppercase tracking-widest text-gray-400 hover:text-rosaCorp transition-colors gap-1">
+                    Ver todos
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- BENTO GRID -->
+            <div class="bento-grid">
+
+                <!-- TARJETA DESTACADA (grande) -->
+                <article class="bento-featured group relative bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="relative overflow-hidden card-img" style="height:280px;">
+                        <img src="assets/img/festival de verano/festival-verano.jpg" alt="Festival Verano"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <!-- Overlay degradado -->
+                        <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 60%);"></div>
+                        <span class="card-number">01</span>
+                        <div class="absolute top-4 right-4 badge-rosa px-3 py-1 rounded-full shadow-sm">
+                            <p class="text-[10px] font-black uppercase tracking-widest">Música</p>
+                        </div>
+                        <!-- Título sobre imagen en featured -->
+                        <div class="absolute bottom-0 left-0 p-6">
+                            <time datetime="2026-06-05" class="text-xs font-semibold text-white/70 flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-rosaCorp"></span> 05-06-2026 · Parque Sur
+                            </time>
+                            <h4 class="font-black text-2xl mt-1 text-white uppercase leading-tight">Festival Verano</h4>
+                            <p class="text-sm text-white/70 mt-1">Música al aire libre en el icónico Parque Sur. Una experiencia inolvidable.</p>
+                        </div>
+                    </div>
+                    <div class="p-5 mt-auto">
                         <a href="evento-verano.html"
                             class="inline-flex items-center text-sm font-black text-rosaCorp group-hover:translate-x-2 transition-transform duration-300">
                             VER DETALLES
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor font-bold">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M9 5l7 7-7 7" />
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
                             </svg>
                         </a>
                     </div>
-                </div>
-            </article>
+                </article>
 
-            <article
-                class="group relative bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
-                <div class="relative overflow-hidden h-48">
-                    <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine de Verano"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
-                        <p class="text-[10px] font-bold text-azulCorp uppercase tracking-widest">Cine</p>
+                <!-- TARJETA 02 -->
+                <article class="group relative bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="assets/img/cine de verano/Cine de Verano.jpg" alt="Cine de Verano"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <span class="card-number">02</span>
+                        <div class="absolute top-4 right-4 badge-azul px-3 py-1 rounded-full shadow-sm">
+                            <p class="text-[10px] font-black uppercase tracking-widest">Cine</p>
+                        </div>
                     </div>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <time datetime="2026-06-15" class="text-xs font-semibold text-gray-400 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-azulCorp"></span> 15-06-2026
-                    </time>
-                    <h4
-                        class="font-black text-xl mt-2 text-gray-800 group-hover:text-azulCorp transition-colors uppercase leading-tight">
-                        Cine de Verano</h4>
-                    <p class="text-sm text-gray-500 mt-3 line-clamp-2">Proyección nocturna frente al mar en Playa
-                        Grande.</p>
-                    <div class="mt-auto pt-6">
-                        <a href="evento-cine.html"
-                            class="inline-flex items-center text-sm font-black text-azulCorp group-hover:translate-x-2 transition-transform duration-300">
-                            VER DETALLES
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor font-bold">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <time datetime="2026-06-15" class="text-xs font-semibold text-gray-400 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-azulCorp"></span> 15-06-2026
+                        </time>
+                        <h4 class="font-black text-xl mt-1 text-gray-800 group-hover:text-azulCorp transition-colors uppercase leading-tight">Cine de Verano</h4>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Proyección nocturna frente al mar en Playa Grande.</p>
+                        <div class="mt-auto pt-5">
+                            <a href="evento-cine.html"
+                                class="inline-flex items-center text-sm font-black text-azulCorp group-hover:translate-x-2 transition-transform duration-300">
+                                VER DETALLES
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </article>
-            <article
-                class="group bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
-                <div class="relative overflow-hidden h-48">
-                    <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto de flautas dulces"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                        <p class="text-[10px] font-bold text-rosaCorp uppercase tracking-widest">Música</p>
-                    </div>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <time class="text-xs font-semibold text-gray-400 flex items-center gap-2"><span
-                            class="w-2 h-2 rounded-full bg-rosaCorp"></span>09-04-2026 · Bogotá</time>
-                    <h4
-                        class="font-black text-xl mt-2 text-gray-800 group-hover:text-rosaCorp transition-colors uppercase leading-tight">
-                        Cuarteto de flautas dulces</h4>
-                    <p class="text-sm text-gray-500 mt-3 line-clamp-2">Música antigua para nuestro tiempo.</p>
-                    <div class="mt-auto pt-6">
-                        <a href="evento-flautas.html"
-                            class="inline-flex items-center text-sm font-black text-rosaCorp group-hover:translate-x-2 transition-transform duration-300">VER
-                            DETALLES <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M9 5l7 7-7 7" />
-                            </svg></a>
-                    </div>
-                </div>
-            </article>
+                </article>
 
-
-            <article
-                class="group relative bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
-                <div class="relative overflow-hidden h-48">
-                    <img src="assets/img/feria gastronomica/feria-gastronomica.jpg" alt="Feria Gastronómica"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full shadow-sm">
-                        <p class="text-[10px] font-bold text-naranjaCorp uppercase tracking-widest">Gastronómia</p>
+                <!-- TARJETA 03 -->
+                <article class="group bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto de flautas"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <span class="card-number">03</span>
+                        <div class="absolute top-4 right-4 badge-rosa px-3 py-1 rounded-full">
+                            <p class="text-[10px] font-black uppercase tracking-widest">Música</p>
+                        </div>
                     </div>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <time datetime="2026-06-25" class="text-xs font-semibold text-gray-400 flex items-center gap-2">
-                        <span class="w-2 h-2 rounded-full bg-naranjaCorp"></span> 25-06-2026
-                    </time>
-                    <h4
-                        class="font-black text-xl mt-2 text-gray-800 group-hover:text-naranjaCorp transition-colors uppercase leading-tight">
-                        Feria Gastronómica</h4>
-                    <p class="text-sm text-gray-500 mt-3 line-clamp-2">Sabores locales y tradición en el Recinto
-                        Ferial.</p>
-                    <div class="mt-auto pt-6">
-                        <a href="evento-feria.html"
-                            class="inline-flex items-center text-sm font-black text-naranjaCorp group-hover:translate-x-2 transition-transform duration-300">
-                            VER DETALLES
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24"
-                                stroke="currentColor font-bold">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M9 5l7 7-7 7" />
-                            </svg>
-                        </a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <time class="text-xs font-semibold text-gray-400 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-rosaCorp"></span>09-04-2026 · Bogotá
+                        </time>
+                        <h4 class="font-black text-xl mt-1 text-gray-800 group-hover:text-rosaCorp transition-colors uppercase leading-tight">Cuarteto de flautas dulces</h4>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Música antigua para nuestro tiempo.</p>
+                        <div class="mt-auto pt-5">
+                            <a href="evento-flautas.html"
+                                class="inline-flex items-center text-sm font-black text-rosaCorp group-hover:translate-x-2 transition-transform duration-300">
+                                VER DETALLES
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
-
-            
-            <article
-                class="group bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
-                <div class="relative overflow-hidden h-48">
-                    <img src="assets/img/exposicion arte/exposicion-arte.jpg" alt="Exposición Arte"
-                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                    <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                        <p class="text-[10px] font-bold text-naranjaCorp uppercase tracking-widest">Arte</p>
+                <!-- TARJETA 04 -->
+                <article class="group relative bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="assets/img/feria gastronomica/feria-gastronomica.jpg" alt="Feria Gastronómica"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <span class="card-number">04</span>
+                        <div class="absolute top-4 right-4 badge-naranja px-3 py-1 rounded-full shadow-sm">
+                            <p class="text-[10px] font-black uppercase tracking-widest">Gastronómia</p>
+                        </div>
                     </div>
-                </div>
-                <div class="p-6 flex flex-col flex-grow">
-                    <time class="text-xs font-semibold text-gray-400 flex items-center gap-2"><span
-                            class="w-2 h-2 rounded-full bg-naranjaCorp"></span>24-01-2026 · Museo Local</time>
-                    <h4
-                        class="font-black text-xl mt-2 text-gray-800 group-hover:text-naranjaCorp transition-colors uppercase leading-tight">
-                        Exposición Arte</h4>
-                    <p class="text-sm text-gray-500 mt-3 line-clamp-2">Pintura moderna en el Museo Local.</p>
-                    <div class="mt-auto pt-6">
-                        <a href="evento-exposicion-arte.html"
-                            class="inline-flex items-center text-sm font-black text-naranjaCorp group-hover:translate-x-2 transition-transform duration-300">VER
-                            DETALLES <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none"
-                                viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
-                                    d="M9 5l7 7-7 7" />
-                            </svg></a>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <time datetime="2026-06-25" class="text-xs font-semibold text-gray-400 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-naranjaCorp"></span> 25-06-2026
+                        </time>
+                        <h4 class="font-black text-xl mt-1 text-gray-800 group-hover:text-naranjaCorp transition-colors uppercase leading-tight">Feria Gastronómica</h4>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Sabores locales y tradición en el Recinto Ferial.</p>
+                        <div class="mt-auto pt-5">
+                            <a href="evento-feria.html"
+                                class="inline-flex items-center text-sm font-black text-naranjaCorp group-hover:translate-x-2 transition-transform duration-300">
+                                VER DETALLES
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </article>
+                </article>
 
+                <!-- TARJETA 05 -->
+                <article class="group bg-white rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 flex flex-col">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="assets/img/exposicion arte/exposicion-arte.jpg" alt="Exposición Arte"
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <span class="card-number">05</span>
+                        <div class="absolute top-4 right-4 badge-naranja px-3 py-1 rounded-full">
+                            <p class="text-[10px] font-black uppercase tracking-widest">Arte</p>
+                        </div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <time class="text-xs font-semibold text-gray-400 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-naranjaCorp"></span>24-01-2026 · Museo Local
+                        </time>
+                        <h4 class="font-black text-xl mt-1 text-gray-800 group-hover:text-naranjaCorp transition-colors uppercase leading-tight">Exposición Arte</h4>
+                        <p class="text-sm text-gray-500 mt-2 line-clamp-2">Pintura moderna en el Museo Local.</p>
+                        <div class="mt-auto pt-5">
+                            <a href="evento-exposicion-arte.html"
+                                class="inline-flex items-center text-sm font-black text-naranjaCorp group-hover:translate-x-2 transition-transform duration-300">
+                                VER DETALLES
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M9 5l7 7-7 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
         </div>
-    </div>
-    <aside class="lg:pl-6 border-l border-gray-100">
-        <h3 class="font-black text-xl uppercase text-gray-800 mb-8 flex items-center gap-2">
-            Recomendados
-            <span class="flex-grow h-[2px] bg-gray-100"></span>
-        </h3>
-        <div class="space-y-4">
 
-            <div onclick="window.location.href='evento-flautas.html'"
-                class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#ba007c] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
-                <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
-                    <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto de flautas"
-                        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-                </div>
-                <div class="flex flex-col justify-between flex-grow">
-                    <div>
-                        <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">09-04-2026</p>
-                        <p
-                            class="font-black text-gray-800 group-hover:text-[#ba007c] transition-colors uppercase text-sm leading-tight">
-                            Cuarteto de flautas dulces
-                        </p>
+        <!-- ══════════════════════════════
+             SIDEBAR MEJORADO
+        ══════════════════════════════ -->
+        <aside class="lg:pl-6 border-l border-gray-100">
+            <div class="mb-8">
+                <div class="section-divider"></div>
+                <h3 class="font-black text-xl uppercase text-gray-800">Recomendados</h3>
+            </div>
+
+            <div class="space-y-4">
+
+                <!-- REC 01 -->
+                <div onclick="window.location.href='evento-flautas.html'"
+                    class="rec-card group bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg cursor-pointer overflow-hidden relative">
+                    <!-- Franja de color -->
+                    <div class="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl" style="background:#ba007c;"></div>
+                    <div class="pl-3 flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-xl bg-gray-100">
+                            <img src="assets/img/cuarteto de flautas/cuarteto-de-falutas.png" alt="Cuarteto de flautas"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow min-w-0">
+                            <div>
+                                <span class="inline-block text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full mb-1 badge-rosa">Música</span>
+                                <p class="font-black text-gray-800 group-hover:text-rosaCorp transition-colors uppercase text-sm leading-tight">
+                                    Cuarteto de flautas dulces
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase">09-04-2026 · Bogotá</p>
+                                <span class="text-rosaCorp text-sm font-black opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex justify-between items-center">
-                        <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Bogotá</p>
-                        <span
-                            class="opacity-0 group-hover:opacity-100 transition-opacity text-[#ba007c] text-xs">→</span>
+                </div>
+
+                <!-- REC 02 -->
+                <div onclick="window.location.href='evento-huellas-de-diversidad.html'"
+                    class="rec-card group bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg cursor-pointer overflow-hidden relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl" style="background:#555555;"></div>
+                    <div class="pl-3 flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-xl bg-gray-100">
+                            <img src="assets/img/huellas de diversidad/huellas-de-diversidad.png" alt="Huellas de diversidad"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow min-w-0">
+                            <div>
+                                <span class="inline-block text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full mb-1 text-white" style="background:#555555;">Cultura</span>
+                                <p class="font-black text-gray-800 group-hover:text-grisCorp transition-colors uppercase text-sm leading-tight">
+                                    Huellas de diversidad
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase">25-03-2026 · Leticia</p>
+                                <span class="text-grisCorp text-sm font-black opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- REC 03 -->
+                <div onclick="window.location.href='evento-laboratorio-artistico.html'"
+                    class="rec-card group bg-white p-4 rounded-xl border border-gray-100 hover:shadow-lg cursor-pointer overflow-hidden relative">
+                    <div class="absolute left-0 top-0 bottom-0 w-1 rounded-l-xl" style="background:#555555;"></div>
+                    <div class="pl-3 flex gap-4">
+                        <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-xl bg-gray-100">
+                            <img src="assets/img/laboratorio artistico/laboratorio-artistico.png" alt="Laboratorio artístico"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
+                        </div>
+                        <div class="flex flex-col justify-between flex-grow min-w-0">
+                            <div>
+                                <span class="inline-block text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-full mb-1 text-white" style="background:#555555;">Arte</span>
+                                <p class="font-black text-gray-800 group-hover:text-grisCorp transition-colors uppercase text-sm leading-tight">
+                                    Laboratorio artístico
+                                </p>
+                            </div>
+                            <div class="flex justify-between items-center mt-2">
+                                <p class="text-[10px] text-gray-400 font-bold uppercase">26-03-2026 · Leticia</p>
+                                <span class="text-grisCorp text-sm font-black opacity-0 group-hover:opacity-100 transition-opacity">→</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+    </main>
+
+    <!-- ══════════════════════════════
+         FOOTER MEJORADO
+    ══════════════════════════════ -->
+
+    <!-- Franja degradada antes del footer -->
+    <div class="footer-accent"></div>
+
+    <footer class="w-full bg-[#111111] text-white pt-20 pb-10">
+        <div class="max-w-[1400px] mx-auto px-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <!-- Logo y descripción -->
+                <div class="space-y-6">
+                    <a href="index.html" class="inline-block group">
+                        <span class="text-2xl font-black uppercase italic tracking-tighter transition-colors duration-300 group-hover:text-rosaCorp">
+                            Happiness<span class="text-rosaCorp group-hover:text-white transition-colors duration-300">&Co</span>
+                        </span>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+                        Creamos experiencias inolvidables a través de eventos que conectan personas, cultura y felicidad.
+                    </p>
+                    <!-- Línea decorativa -->
+                    <div style="width:40px; height:3px; background: linear-gradient(90deg,#ba007c,#ff7b00); border-radius:2px;"></div>
+                </div>
+
+                <!-- Navegación -->
+                <div>
+                    <h4 class="font-black uppercase italic tracking-tighter text-rosaCorp text-lg mb-8">Navegación</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Inicio</a></li>
+                        <li><a href="todos-los-eventos.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Eventos</a></li>
+                        <li><a href="eventos.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Próximos Eventos</a></li>
+                        <li><a href="historial.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Historial</a></li>
+                        <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Sobre nosotros</a></li>
+                        <li><a href="Fuentes.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Fuentes</a></li>
+                        <li><a href="contacto.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categorías -->
+                <div>
+                    <h4 class="font-black uppercase italic tracking-tighter text-azulCorp text-lg mb-8">Categorías</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Música</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Cine</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Gastronomía</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Arte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Cultura</a></li>
+                    </ul>
+                </div>
+
+                <!-- Redes sociales -->
+                <div class="space-y-8">
+                    <h4 class="font-black uppercase italic tracking-tighter text-naranjaCorp text-lg mb-4">Síguenos</h4>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">
+                        Únete a nuestra comunidad oficial.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 hover:bg-rosaCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 hover:bg-rosaCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
+                        </a>
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-azulCorp/50 hover:bg-azulCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-azulCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-naranjaCorp/50 hover:bg-naranjaCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-naranjaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4l11.733 16h3.267l-11.733 -16z" />
+                                <path d="M18.267 4h-3.267l-4.733 6l4.733 6z" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
 
-            <div onclick="window.location.href='evento-huellas-de-diversidad.html'"
-    class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#555555] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
-    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
-        <img src="assets/img/huellas de diversidad/huellas-de-diversidad.png" alt="Huellas de diversidad"
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-    </div>
-    <div class="flex flex-col justify-between flex-grow">
-        <div>
-            <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">25-03-2026</p>
-            <p class="font-black text-gray-800 group-hover:text-[#555555] transition-colors uppercase text-sm leading-tight">
-                Huellas de diversidad
-            </p>
-        </div>
-        <div class="flex justify-between items-center">
-            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Leticia</p>
-            <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#555555] text-xs">→</span>
-        </div>
-    </div>
-</div>
-
-<div onclick="window.location.href='evento-laboratorio-artistico.html'"
-    class="group bg-white p-4 rounded-xl shadow-sm border-l-4 border-[#555555] hover:shadow-md hover:-translate-y-1 transition-all duration-300 cursor-pointer flex gap-4">
-    <div class="w-20 h-20 flex-shrink-0 overflow-hidden rounded-lg bg-gray-200">
-        <img src="assets/img/laboratorio artistico/laboratorio-artistico.png" alt="Laboratorio artístico"
-            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300">
-    </div>
-    <div class="flex flex-col justify-between flex-grow">
-        <div>
-            <p class="text-[10px] text-gray-400 font-bold uppercase mb-1">26-03-2026</p>
-            <p class="font-black text-gray-800 group-hover:text-[#555555] transition-colors uppercase text-sm leading-tight">
-                Laboratorio artístico
-            </p>
-        </div>
-        <div class="flex justify-between items-center">
-            <p class="text-[10px] text-gray-400 font-bold uppercase tracking-tighter">Leticia</p>
-            <span class="opacity-0 group-hover:opacity-100 transition-opacity text-[#555555] text-xs">→</span>
-        </div>
-    </div>
-</div>
-        </div>
-    </aside>
-</main>
-<footer class="w-full bg-[#111111] text-white pt-20 pb-10 mt-10">
-    <div class="max-w-[1400px] mx-auto px-6">
-
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
-
-            <div class="space-y-6">
-                <a href="index.html" class="inline-block group">
-                    <span
-                        class="text-2xl font-black uppercase italic tracking-tighter transition-colors duration-300 group-hover:text-rosaCorp">
-                        Happiness<span
-                            class="text-rosaCorp group-hover:text-white transition-colors duration-300">&Co</span>
-                    </span>
-                </a>
-                <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                    Creamos experiencias inolvidables a través de eventos que conectan personas, cultura y
-                    felicidad. Tu destino premium.
+            <!-- Línea divisoria + copyright -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-xs font-bold uppercase tracking-widest">
+                    © 2026 Happiness&Co · Todos los derechos reservados
                 </p>
-            </div>
-
-            <div>
-                <h4 class="font-black uppercase italic tracking-tighter text-rosaCorp text-lg mb-8">Navegación</h4>
-                <ul class="space-y-4">
-                    <li><a href="index.html"
-                            class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Inicio</a>
-                    </li>
-                    <li><a href="todos-los-eventos.html"
-                            class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Eventos</a>
-                    </li>
-                    <li><a href="historial.html"
-                            class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Historial</a>
-                    </li>
-                    <li><a href="contacto.html"
-                            class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-black uppercase italic tracking-tighter text-azulCorp text-lg mb-8">Categorías</h4>
-                <ul class="space-y-4">
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Música</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Cine</a>
-                    </li>
-                    <li><a href="#"
-                            class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Gastronomía</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="space-y-8">
-                <h4 class="font-black uppercase italic tracking-tighter text-naranjaCorp text-lg mb-4">Síguenos</h4>
-                <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">
-                    Únete a nuestra comunidad oficial.
-                </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="#"
-                        class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                    </a>
-
-                    <a href="#"
-                        class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
-                            </path>
-                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                        </svg>
-                    </a>
-
-                    <a href="#"
-                        class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-azulCorp/50 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-6 h-6 text-gray-400 group-hover:text-azulCorp transition-colors"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                    </a>
-
-                    <a href="#"
-                        class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-naranjaCorp/50 transition-all duration-300">
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            class="w-5 h-5 text-gray-400 group-hover:text-naranjaCorp transition-colors"
-                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4l11.733 16h3.267l-11.733 -16z" />
-                            <path d="M18.267 4h-3.267l-4.733 6l4.733 6z" />
-                        </svg>
-                    </a>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-600 hover:text-gray-400 transition-colors text-xs font-bold uppercase tracking-widest">Privacidad</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-400 transition-colors text-xs font-bold uppercase tracking-widest">Términos</a>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
+
 </body>
-
 </html>

@@ -8,27 +8,134 @@
         tailwind.config = { theme: { extend: { colors: { rosaCorp: '#ba007c', azulCorp: '#009bdb', naranjaCorp: '#ff7b00', grisCorp: '#555555' } } } }
     </script>
     <title>Fuentes - HAPPINESS&Co</title>
+    <style>
+        /* ── HEADER MEJORADO ── */
+        .header-bar {
+            border-bottom: 3px solid #ba007c;
+            background: linear-gradient(90deg, #2a2a2a 0%, #3a3a3a 100%);
+        }
+
+        /* ── NAV LINK HOVER ── */
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #ba007c;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        /* ── HERO COUNTER ── */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .hero-title   { animation: fadeUp 0.8s ease forwards; }
+        .hero-meta    { animation: fadeUp 0.8s 0.2s ease both; }
+        .hero-btn     { animation: fadeUp 0.8s 0.4s ease both; }
+
+        /* ── BENTO GRID ── */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto auto;
+            gap: 1.5rem;
+        }
+        .bento-featured {
+            grid-column: 1 / 3;
+            grid-row: 1 / 2;
+        }
+        .bento-featured .card-img { height: 280px; }
+        .bento-featured h4 { font-size: 1.6rem; }
+
+        @media (max-width: 768px) {
+            .bento-grid { grid-template-columns: 1fr; }
+            .bento-featured { grid-column: 1; grid-row: auto; }
+        }
+
+        /* ── CARD NÚMERO ── */
+        .card-number {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 0.15em;
+            color: white;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(6px);
+            padding: 3px 10px;
+            border-radius: 999px;
+        }
+
+        /* ── BADGE COLOREADO ── */
+        .badge-rosa   { background: #ba007c; color: white; }
+        .badge-azul   { background: #009bdb; color: white; }
+        .badge-naranja{ background: #ff7b00; color: white; }
+
+        /* ── SIDEBAR CARD MEJORADA ── */
+        .rec-card { transition: all 0.3s ease; }
+        .rec-card:hover { transform: translateX(6px); }
+
+        /* ── FOOTER FRANJA ── */
+        .footer-accent {
+            height: 4px;
+            background: linear-gradient(90deg, #ba007c 0%, #009bdb 50%, #ff7b00 100%);
+        }
+
+        /* ── SEPARADOR SECCIÓN ── */
+        .section-divider {
+            width: 60px;
+            height: 4px;
+            background: #ba007c;
+            border-radius: 2px;
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 
 <body class="bg-gray-50 flex flex-col min-h-screen">
-    <header class="bg-grisCorp shadow sticky top-0 z-50">
-        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html">
-                <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS" class="h-10 w-auto object-contain">
-            </a>
-            <nav class="hidden md:block">
-                <ul class="flex gap-6">
-                    <li><a href="index.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Inicio</a></li>
-                    <li><a href="todos-los-eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Eventos</a></li>
-                    <li><a href="eventos.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Próximos Eventos</a></li>
-                    <li><a href="historial.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Historial</a></li>
-                    <li><a href="sobre-nosotros.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Sobre nosotros</a></li>
-                    <li><a href="Fuentes.html" class="nav-link text-rosaCorp border-b-2 border-rosaCorp pb-1">Fuentes</a></li>
-                    <li><a href="contacto.html" class="nav-link text-white hover:text-rosaCorp transition-colors">Contacto</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+   <header class="sticky top-0 z-50" style="background: #555555; border-bottom: 2px solid #ba007c;">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+
+        <a href="index.html">
+            <img src="assets/img/happines-and-co-propuesta-05.jpg" alt="HAPPINESS"
+                class="h-10 w-auto object-contain">
+        </a>
+
+        <nav class="hidden md:block">
+            <ul class="flex gap-8">
+                <li><a href="index.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Inicio</a></li>
+                <li><a href="todos-los-eventos.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Eventos</a></li>
+                <li><a href="eventos.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Próximos Eventos</a></li>
+                <li><a href="historial.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Historial</a></li>
+                <li><a href="sobre-nosotros.html"
+                    class="text-white hover:text-rosaCorp font-black text-[11px] uppercase tracking-widest transition-colors">Sobre nosotros</a></li>
+                <li><a href="Fuentes.html"
+                    class="text-rosaCorp font-black text-[11px] uppercase tracking-widest border-b-2 border-rosaCorp pb-1">Fuentes</a></li>
+                <li>
+                    <a href="contacto.html"
+                        class="px-5 py-2 font-black text-[11px] uppercase tracking-widest text-white rounded-full transition-all duration-300 hover:opacity-80"
+                        style="background:#ba007c;">
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+</body>
 
     <section class="bg-white border-b border-gray-200 py-12">
         <div class="container mx-auto px-6 text-center">
@@ -36,85 +143,139 @@
                 Fuentes y <span class="text-rosaCorp">Recursos</span>
             </h1>
             <p class="mt-4 text-gray-500 font-medium max-w-2xl mx-auto italic">
-                Agradecimientos y referencias a los materiales, imágenes y datos utilizados para la creación de este proyecto.
+                Agradecimientos y referencias a los materiales, imágenes y datos utilizados para la creación de este
+                proyecto.
             </p>
         </div>
     </section>
 
     <main class="container mx-auto px-6 py-16 flex-grow">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
+
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
                 <div class="w-12 h-12 bg-rosaCorp/10 rounded-xl flex items-center justify-center mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rosaCorp" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-rosaCorp" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
                 </div>
                 <h3 class="font-black text-xl uppercase text-gray-800 mb-4">Imágenes y Gráficos</h3>
                 <ul class="space-y-3 text-sm text-gray-600">
-                    <li class="border-b border-gray-50 pb-2">
-                        <strong class="text-rosaCorp block uppercase text-[10px]">Banco de imágenes:</strong>
-                        PEGA AQUÍ (Ej: Unsplash, Pexels, etc.)
+                    <li class="border-b border-gray-50 pb-4">
+                        <strong class="text-rosaCorp block uppercase text-[10px] mb-2">
+                            Bancos de imágenes y enlaces:
+                        </strong>
+                        <div class="flex flex-col space-y-2">
+                            <a href="https://www.banrepcultural.org/actividades" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-black hover:text-blue-600 hover:underline break-all transition-colors duration-200">
+                                Banrepcultural - Actividades
+                            </a>
+
+                            <a href="https://lagenda.org/noticias/festivales-de-verano-en-tenerife-22932"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-black hover:text-blue-600 hover:underline break-all transition-colors duration-200">
+                                L'agenda - Festivales Tenerife
+                            </a>
+
+                            <a href="https://es.yamaha.com/es/musical-instruments/brass-woodwinds/products/recorders/"
+                                target="_blank" rel="noopener noreferrer"
+                                class="text-black hover:text-blue-600 hover:underline break-all transition-colors duration-200">
+                                Yamaha - Catálogo de Flautas
+                            </a>
+                        </div>
                     </li>
                     <li class="border-b border-gray-50 pb-2">
                         <strong class="text-rosaCorp block uppercase text-[10px]">Logotipos:</strong>
-                        PEGA AQUÍ (Ej: Diseñado por Sebastian en Canva)
-                    </li>
-                    <li>
-                        <strong class="text-rosaCorp block uppercase text-[10px]">Iconografía:</strong>
-                        PEGA AQUÍ (Ej: Heroicons y Font Awesome)
-                    </li>
+                        <a href="https://tuniversformacion.es/" target="_blank"
+                            class="text-black hover:text-blue-600 hover:underline transition-colors duration-200">
+                            tuniversformacion
+                        </a>
+                        </li>
+                        <li class="border-b border-gray-50 pb-2">
+                            <strong class="text-rosaCorp block uppercase text-[10px]">Iconografía:</strong>
+                            <a href="https://tuniversformacion.es/" target="_blank"
+                                class="text-black hover:text-blue-600 hover:underline transition-colors duration-200">
+                                tuniversformacion
+                            </a>
+                        </li>
                 </ul>
             </div>
 
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
                 <div class="w-12 h-12 bg-azulCorp/10 rounded-xl flex items-center justify-center mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azulCorp" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-azulCorp" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                 </div>
                 <h3 class="font-black text-xl uppercase text-gray-800 mb-4">Contenido de Eventos</h3>
                 <ul class="space-y-3 text-sm text-gray-600">
                     <li class="border-b border-gray-50 pb-2">
                         <strong class="text-azulCorp block uppercase text-[10px]">Información histórica:</strong>
-                        PEGA AQUÍ (Ej: Wikipedia, Portales de cultura)
+                        <a href="https://www.banrepcultural.org/actividades" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-black hover:text-blue-600 hover:underline break-all transition-colors duration-200">
+                                Banrepcultural - Actividades
+                            </a>
                     </li>
                     <li class="border-b border-gray-50 pb-2">
                         <strong class="text-azulCorp block uppercase text-[10px]">Fechas y Lugares:</strong>
-                        PEGA AQUÍ (Ej: Datos ficticios para proyecto académico)
+                        <a href="https://www.banrepcultural.org/actividades" target="_blank"
+                                rel="noopener noreferrer"
+                                class="text-black hover:text-blue-600 hover:underline break-all transition-colors duration-200">
+                                Banrepcultural - Actividades
+                            </a>
                     </li>
                 </ul>
             </div>
 
             <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
                 <div class="w-12 h-12 bg-naranjaCorp/10 rounded-xl flex items-center justify-center mb-6">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-naranjaCorp" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-naranjaCorp" fill="none"
+                        viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
                 </div>
                 <h3 class="font-black text-xl uppercase text-gray-800 mb-4">Tecnologías</h3>
                 <ul class="space-y-3 text-sm text-gray-600">
                     <li class="border-b border-gray-50 pb-2">
                         <strong class="text-naranjaCorp block uppercase text-[10px]">Estilos:</strong>
-                        Tailwind CSS (v3.4)
+                         <a href="https://tailwindcss.com/" target="_blank"
+                                class="text-black hover:text-blue-600 hover:underline transition-colors duration-200">
+                                  Tailwind CSS (v3.4)
+                            </a>
                     </li>
                     <li class="border-b border-gray-50 pb-2">
                         <strong class="text-naranjaCorp block uppercase text-[10px]">Frameworks:</strong>
-                        Google Fonts (Inter/Montserrat)
+                        <a href="https://tuniversformacion.es/" target="_blank"
+                                class="text-black hover:text-blue-600 hover:underline transition-colors duration-200">
+                                tuniversformacion
+                            </a>
                     </li>
                     <li>
                         <strong class="text-naranjaCorp block uppercase text-[10px]">Herramientas:</strong>
-                        Visual Studio Code
+                        <a href=https://code.visualstudio.com/ target="_blank"
+                                class="text-black hover:text-blue-600 hover:underline transition-colors duration-200">
+                                Visual Studio Code
+                            </a>
                     </li>
                 </ul>
             </div>
 
         </div>
     </main>
- <footer class="w-full bg-[#111111] text-white pt-20 pb-10 mt-10">
-        <div class="max-w-[1400px] mx-auto px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-20">
+ <div class="footer-accent"></div>
 
+    <footer class="w-full bg-[#111111] text-white pt-20 pb-10">
+        <div class="max-w-[1400px] mx-auto px-6">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <!-- Logo y descripción -->
                 <div class="space-y-6">
                     <a href="index.html" class="inline-block group">
                         <span class="text-2xl font-black uppercase italic tracking-tighter transition-colors duration-300 group-hover:text-rosaCorp">
@@ -122,49 +283,86 @@
                         </span>
                     </a>
                     <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
-                        Creamos experiencias inolvidables a través de eventos que conectan personas, cultura y felicidad. Tu destino premium.
+                        Creamos experiencias inolvidables a través de eventos que conectan personas, cultura y felicidad.
                     </p>
+                    <!-- Línea decorativa -->
+                    <div style="width:40px; height:3px; background: linear-gradient(90deg,#ba007c,#ff7b00); border-radius:2px;"></div>
                 </div>
 
+                <!-- Navegación -->
                 <div>
                     <h4 class="font-black uppercase italic tracking-tighter text-rosaCorp text-lg mb-8">Navegación</h4>
-                    <ul class="space-y-4">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Inicio</a></li>
-                        <li><a href="eventos.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Eventos</a></li>
-                        <li><a href="historial.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Historial</a></li>
-                        <li><a href="contacto.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest">Contacto</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Inicio</a></li>
+                        <li><a href="todos-los-eventos.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Eventos</a></li>
+                        <li><a href="eventos.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Próximos Eventos</a></li>
+                        <li><a href="historial.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Historial</a></li>
+                        <li><a href="sobre-nosotros.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Sobre nosotros</a></li>
+                        <li><a href="Fuentes.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Fuentes</a></li>
+                        <li><a href="contacto.html" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest hover:pl-2 duration-200 inline-block">Contacto</a></li>
                     </ul>
                 </div>
 
+                <!-- Categorías -->
                 <div>
                     <h4 class="font-black uppercase italic tracking-tighter text-azulCorp text-lg mb-8">Categorías</h4>
-                    <ul class="space-y-4">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Música</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Cine</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic">Gastronomía</a></li>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Música</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Cine</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Gastronomía</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Arte</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest italic hover:pl-2 duration-200 inline-block">Cultura</a></li>
                     </ul>
                 </div>
 
+                <!-- Redes sociales -->
                 <div class="space-y-8">
                     <h4 class="font-black uppercase italic tracking-tighter text-naranjaCorp text-lg mb-4">Síguenos</h4>
-                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">Únete a nuestra comunidad oficial.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    <p class="text-gray-400 text-[10px] font-bold uppercase tracking-widest mb-6">
+                        Únete a nuestra comunidad oficial.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 hover:bg-rosaCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
                         </a>
-                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-rosaCorp/50 hover:bg-rosaCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-rosaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.42 8.6.42 8.6.42s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg>
                         </a>
-                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-azulCorp/50 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-gray-400 group-hover:text-azulCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-azulCorp/50 hover:bg-azulCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-azulCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
                         </a>
-                        <a href="#" class="group flex items-center justify-center w-12 h-12 rounded-xl bg-white/5 border border-white/10 hover:border-naranjaCorp/50 transition-all duration-300">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-naranjaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h3.267l-11.733 -16z" /><path d="M18.267 4h-3.267l-4.733 6l4.733 6z" /></svg>
+                        <a href="#" class="group flex items-center justify-center w-11 h-11 rounded-xl bg-white/5 border border-white/10 hover:border-naranjaCorp/50 hover:bg-naranjaCorp/10 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-gray-400 group-hover:text-naranjaCorp transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4l11.733 16h3.267l-11.733 -16z" />
+                                <path d="M18.267 4h-3.267l-4.733 6l4.733 6z" />
+                            </svg>
                         </a>
                     </div>
                 </div>
             </div>
+
+            <!-- Línea divisoria + copyright -->
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-600 text-xs font-bold uppercase tracking-widest">
+                    © 2026 Happiness&Co · Todos los derechos reservados
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-600 hover:text-gray-400 transition-colors text-xs font-bold uppercase tracking-widest">Privacidad</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-400 transition-colors text-xs font-bold uppercase tracking-widest">Términos</a>
+                </div>
+            </div>
         </div>
     </footer>
+
 </body>
+
 </html>
