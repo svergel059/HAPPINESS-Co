@@ -1,54 +1,44 @@
-    # HAPPINESS&Co
+# 🌟 HAPPINESS&Co - Agenda Cultural
 
-    Proyecto de desarrollo web cuyo objetivo es crear una agenda cultural que recopile eventos como música, teatro y exposiciones.
+¡Bienvenido a **HAPPINESS&Co**! Este proyecto es una solución integral diseñada para la gestión y visualización de eventos culturales, como música, teatro, cine y exposiciones. Combina una interfaz moderna con una estructura de datos robusta para ofrecer una experiencia completa al usuario.
 
+---
 
-    ## Autor
+## 🚀 Sobre el Proyecto
+HAPPINESS&Co nace con el objetivo de centralizar la oferta cultural en una plataforma dinámica. El sistema permite explorar eventos organizados por categorías y mantenerse actualizado mediante un sistema de noticias automatizado.
 
-    * Nombre: Juan Sebastian Hernandez Vergel
-    * Curso: DAW-DAM
+### ✨ Características principales:
+* **Frontend Moderno:** Interfaz fluida basada en **Tailwind CSS** con una arquitectura *Utility-First* y micro-interacciones (hovers, transiciones y animaciones `fadeUp`).
+* **Gestión de Datos:** Backend desarrollado en **Java** para la lógica de administración de los eventos.
+* **Sindicación de Contenidos:** Feed **RSS 2.0** funcional que permite la actualización de la agenda en tiempo real.
+* **Persistencia:** Base de datos **SQL** optimizada para almacenar toda la información de la agenda de forma relacional.
 
+---
 
+## 🛠️ Stack Tecnológico
+El proyecto integra diversas tecnologías para cubrir todo el ciclo de desarrollo:
 
-    ##  Estructura del proyecto
+* **Frontend:** `HTML` + `Tailwind CSS` (Configuración personalizada con colores corporativos: Rosa, Azul, Naranja y Gris).
+* **Backend:** `Java` (Lógica de programación y gestión).
+* **Datos:** `SQL` (Estructura de base de datos).
+* **Sindicación:** `XML / RSS 2.0`.
+* **Control de Versiones:** `Git` & `GitHub` (Con un historial de commits diario).
 
-    *  lenguaje-marcas → Página web con HTML y Tailwind
-    *  rss → Feed RSS de eventos
-    *  base-datos → Base de datos en SQL
-    * programacion → Aplicación en Java
+---
 
+## 📂 Estructura del Repositorio
+Para facilitar la navegación por el proyecto, el código se organiza en las siguientes carpetas:
 
+* 📁 **`lenguaje-marcas/`**: Contiene la web completa incluyendo las secciones de *Inicio*, *Sobre Nosotros* y *Contacto*.
+* 📁 **`rss/`**: Archivos de sindicación XML para lectores de noticias.
+* 📁 **`base-datos/`**: Scripts necesarios para la creación y carga de la base de datos SQL.
+* 📁 **`programacion/`**: Código fuente de la aplicación de gestión desarrollada en Java.
 
-    ## Tecnologías utilizadas
+---
 
-    * HTML
-    * CSS (Tailwind)
-    * Java
-    * SQL
-    * Git y GitHub
+## ⚙️ Instalación y Uso
+Para poner en marcha el proyecto de forma local, sigue estos pasos:
 
-    ## Descripción
-
-    HAPPINESS&Co es una agenda cultural que permite visualizar eventos organizados por categorías.
-
-    Incluye:
-
-    * Página web completa
-    * Sistema de base de datos
-    * RSS
-    * Programa en Java para gestión de datos
-
-
-    ## Repositorio
-
-    https://github.com/svergel059/HAPPINESS-Co.git
-
-
-    ## Control de versiones
-
-    Se ha realizado al menos un commit por día durante el desarrollo del proyecto.
-
-
-    ## Documentación
-
-    El proceso completo del desarrollo se explica en el PDF entregado junto con el proyecto.
+1. **Clona el repositorio:**
+   ```bash
+   git clone [https://github.com/svergel059/HAPPINESS-Co.git](https://github.com/svergel059/HAPPINESS-Co.git)

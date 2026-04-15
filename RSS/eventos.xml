@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>Happiness&amp;Co – Eventos</title>
+        <link>
+            file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/todos-los-eventos.html</link>
+        <description>Todos los eventos de Happiness &amp; Co: próximos y finalizados.</description>
+        <language>es</language>
+        <pubDate>Tue, 14 Apr 2026 09:30:00 +0200</pubDate>
+
+        <item>
+            <title>Festival Verano</title>
+            <link>
+                file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/evento-verano.html</link>
+            <description>Música al aire libre en el icónico Parque Sur. Una experiencia inolvidable
+                con los mejores artistas del verano.</description>
+            <pubDate>Fri, 05 Jun 2026 20:00:00 +0200</pubDate>
+            <category>Música</category>
+        </item>
+
+        <item>
+            <title>Cine de Verano</title>
+            <link>file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/evento-cine.html</link>
+            <description>Proyección nocturna frente al mar en Playa Grande. Una noche mágica bajo
+                las estrellas.</description>
+            <pubDate>Mon, 15 Jun 2026 22:30:00 +0200</pubDate>
+            <category>Cine</category>
+        </item>
+
+        <item>
+            <title>Feria Gastronómica</title>
+            <link>file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/evento-feria.html</link>
+            <description>Sabores locales y tradición. Descubre lo mejor de la gastronomía local con
+                experiencias culinarias únicas.</description>
+            <pubDate>Thu, 25 Jun 2026 13:15:00 +0200</pubDate>
+            <category>Gastronomía</category>
+        </item>
+
+        <item>
+            <title>Cuarteto de flautas dulces</title>
+            <link>
+                file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/evento-flautas.html</link>
+            <description>Música antigua para nuestro tiempo. Una experiencia única que acerca las
+                composiciones del renacimiento y el barroco.</description>
+            <pubDate>Thu, 09 Apr 2026 18:45:00 +0200</pubDate>
+            <category>Música</category>
+        </item>
+
+        <item>
+            <title>Laboratorio artístico</title>
+            <link>
+                file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/evento-laboratorio-artistico.html</link>
+            <description>Labor-Arte: un espacio para la creación y experimentación artística
+                colectiva enfocado en el entorno amazónico.</description>
+            <pubDate>Thu, 26 Mar 2026 11:00:00 +0100</pubDate>
+            <category>Laboratorio</category>
+        </item>
+
+        <item>
+            <title>Huellas de diversidad</title>
+            <link>
+                file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/evento-huellas-de-diversidad.html</link>
+            <description>Talleres con maletas didácticas del Museo del Oro para explorar nuestra
+                identidad cultural y raíces ancestrales.</description>
+            <pubDate>Wed, 25 Mar 2026 16:20:00 +0100</pubDate>
+            <category>Talleres</category>
+        </item>
+
+        <item>
+            <title>Exposición Arte Moderno</title>
+            <link>
+                file:///C:/Users/ALUMNOS-FP/Desktop/HAPPINESS-Co/lenguaje-marcas/evento-exposicion-arte.html</link>
+            <description>Muestra de pintura moderna con artistas contemporáneos de la región,
+                destacando nuevas tendencias visuales.</description>
+            <pubDate>Sat, 24 Jan 2026 10:10:00 +0100</pubDate>
+            <category>Exposición</category>
+        </item>
+    </channel>
+</rss>
