@@ -8,7 +8,7 @@
 HAPPINESS&Co nace con el objetivo de centralizar la oferta cultural en una plataforma dinámica. El sistema permite explorar eventos organizados por categorías y mantenerse actualizado mediante un sistema de noticias automatizado.
 
 ### ✨ Características principales:
-* **Frontend Moderno:** Interfaz fluida basada en **Tailwind CSS** con una arquitectura *Utility-First* y micro-interacciones (hovers, transiciones y animaciones `fadeUp`).
+* **Frontend Moderno:** Interfaz fluida basada en **Tailwind CSS** con una arquitectura *Utility-first* y micro-interacciones (hovers, transiciones y animaciones fedeUp).
 * **Gestión de Datos:** Backend desarrollado en **Java** para la lógica de administración de los eventos.
 * **Sindicación de Contenidos:** Feed **RSS 2.0** funcional que permite la actualización de la agenda en tiempo real.
 * **Persistencia:** Base de datos **SQL** optimizada para almacenar toda la información de la agenda de forma relacional.
@@ -18,11 +18,11 @@ HAPPINESS&Co nace con el objetivo de centralizar la oferta cultural en una plata
 ## 🛠️ Stack Tecnológico
 El proyecto integra diversas tecnologías para cubrir todo el ciclo de desarrollo:
 
-* **Frontend:** `HTML` + `Tailwind CSS` (Configuración personalizada con colores corporativos: Rosa, Azul, Naranja y Gris).
-* **Backend:** `Java` (Lógica de programación y gestión).
-* **Datos:** `SQL` (Estructura de base de datos).
-* **Sindicación:** `XML / RSS 2.0`.
-* **Control de Versiones:** `Git` & `GitHub` (Con un historial de commits diario).
+* **Frontend:** HTML + Tailwind CSS (Configuración personalizada con colores corporativos: Rosa, Azul, Naranja y Gris).
+* **Backend:** Java (Lógica de programación y gestión).
+* **Datos:** SQL (Estructura de base de datos).
+* **Sindicación:** XML / RSS 2.0
+* **Control de Versiones:** GIT & GitHub (Con un historial de commits diario).
 
 ---
 
