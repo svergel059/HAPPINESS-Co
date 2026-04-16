@@ -41,4 +41,4 @@ Para poner en marcha el proyecto de forma local, sigue estos pasos:
 
 1. **Clona el repositorio:**
    ```bash
-   git clone [https://github.com/svergel059/HAPPINESS-Co.git](https://github.com/svergel059/HAPPINESS-Co.git)
+   git clone [https://github.com/svergel059/HAPPINESS-Co.git
